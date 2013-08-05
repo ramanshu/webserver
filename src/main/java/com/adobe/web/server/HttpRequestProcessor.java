@@ -40,7 +40,7 @@ public class HttpRequestProcessor {
 			IllegalAccessException, URISyntaxException, IOException {
 		this.server = server;
 		admin_root = "C:/Users/mahaur/Desktop/admin";
-		System.out.println("Admin root : "+" "+ admin_root);
+		//System.out.println("Admin root : "+" "+ admin_root);
 		
 		try{
 			document_root = prop.getProperty("documentRoot").trim();

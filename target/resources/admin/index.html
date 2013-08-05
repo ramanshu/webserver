@@ -148,13 +148,11 @@
       <div class="body-item jumbotron" id="home">
         <h1>WebServer - 1.0</h1>
         <p class="lead">WebServer - 1.0, was created as a initiation exercise at Adobe India Pvt. Limited, Nodia, to get the author acquainted with industry development practices and the technologies used at Adobe.</p>
-        <a class="btn btn-large btn-success" href="#">Download Now!</a>
+        <a class="btn btn-large btn-success" href="https://github.com/ramanshu/webserver/archive/master.zip">Download Now!</a>
       </div>
       <div class="body-item jumbotron hide" id="documentation">
 			<div class="span12">
 				<div class="span3"><a href="#" class="doc-file" link="/admin/readme.txt"> Read Me!		</a></div>
-				<div class="span3"><a href="#" class="doc-file">Installation	</a></div>
-				<div class="span3"><a href="#" class="doc-file">Project		</a></div>
 				<hr>
 			</div>
 			<iframe id="doc-iframe" src="/admin/readme.txt" frameBorder="0" class="span12">
@@ -162,7 +160,7 @@
       </div>
       <div class="body-item jumbotron hide" id="javadocs">
 		
-			<iframe id="javadoc-iframe" src="/asdsafda" frameBorder="0" class="span12">
+			<iframe id="javadoc-iframe" src="/admin/javadocs/index.html" frameBorder="0" class="span12">
 			</iframe>
 
       </div>
@@ -246,6 +244,13 @@
 				$(".body-item").not(item).hide();
 				item.show();
         });
+		$(".delete-file").click(function( event) {
+				var current = $(this).attr('link');
+				$(".nav-item").not($(this)).removeClass("active");
+				var item = $("#"+current);
+				$(".body-item").not(item).hide();
+				item.show();
+        });
 		function scrollGo()
 		{
 				var x= $(this).offset().top()-100;
@@ -289,12 +294,12 @@
 		
 		getLog();
 		
-		$(".doc-file").click(function(event){
+		/*$(".doc-file").click(function(event){
 				var link = $(this).attr('link');
 				alert(link);
 				$("#doc-iframe").attr('src',link);
 				$("#doc-iframe").focus(scrollGo);
-			});
+			});*/
 	</script>
 
   </body>

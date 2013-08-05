@@ -193,8 +193,16 @@ public class HttpWebServer {
 	}
 	}
 	public void Start() throws IOException, InterruptedException {
+		
+		try{
 		serverSocket = new ServerSocket(port);
 		log.info("Starting server on port " + port);
+		}
+		catch(Exception e)
+		{
+			log.info("Could not start server on port: " + port+". Looks like port is already in use.");
+			System.exit(0);
+		}
 		for (int i = 0; i < threadPoolSize; i++) {
 			httpWebServerThread[i] = new Thread(new HttpWebServerThread(i));
 			httpWebServerThread[i].start();

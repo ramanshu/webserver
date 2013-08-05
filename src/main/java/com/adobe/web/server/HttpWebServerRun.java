@@ -11,15 +11,6 @@ public class HttpWebServerRun {
 	public static void main(String[] args) throws IOException, InterruptedException, InstantiationException, IllegalAccessException, URISyntaxException
 	{
 		 PropertyConfigurator.configure("log4j.properties");
-		// BasicConfigurator.configure();
-		// log.debug("This is a debug message");
-		// log.info("This is a  info message");
-		// log.error("This is a error message");
-		// File path = new File("res\\config.properties");
-		// String paths=path.getCanonicalPath();
-		// System.out.println("Current working directory : " + paths);
-		// String workingDir = System.getProperty("user.dir");
-		// System.out.println("Current working directory : " + workingDir);
 		 
     	try {
     		Properties prop = new Properties();
