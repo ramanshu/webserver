@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 60px;
+      }
+
+      /* Custom container */
+      .container {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .container > hr {
+        margin: 60px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 80px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 100px;
+        line-height: 1;
+      }
+      .jumbotron .lead {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+	  .activity-pane{
+		max-height:400px;
+		overflow:scroll; 
+	  }
+      .navbar .navbar-inner {
+        padding: 0;
+      }
+      .navbar .nav {
+        margin: 0;
+        display: table;
+        width: 100%;
+      }
+      .navbar .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+      .navbar .nav li a {
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .navbar .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+	  .request{
+	  color:blue;
+	  font-weight:bold;
+	  }
+	  .response{
+	  color:green;
+	  font-weight:bold;
+	  }
+	  .jumbotron iframe{
+		background:white;
+		margin: 0px;
+		min-height:700px;
+		
+	  }
+	  .content{
+		min-height:200px;
+		max-height:400px;
+		overflow:auto;
+	  }
+	  .browser-list{
+		max-height:300px;
+		overflow:auto;
+	  }
+	  .browser-item{
+	  margin:10px 0px;
+	  padding:5px 0px;
+	  }
+	  .browser-item.folder{
+		background:rgb(225, 225, 225);	
+	  }
+	  .browser-item:hover{
+		background:rgb(250, 250, 250);	
+	  }
+	  .post-file-form{
+		background:rgb(250, 250, 250);	
+	  }
+	  .post-file-form form{
+		margin:10px 10px;
+	  }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="masthead">
+        <h3 class="muted">WebServer-1.0</h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="nav-item active" link="home"><a href="#">Home</a></li>
+                <li class="nav-item" link="documentation"><a href="#">Documentation</a></li>
+                <li class="nav-item" link="javadocs"><a href="#">Javadocs</a></li>
+                <li class="nav-item" link="source"><a href="#">Source</a></li>
+                <li class="nav-item" link="activity"><a href="#">Activity</a></li>
+                <li class="nav-item" link="admin"><a href="#">Admin</a></li>
+                <li class="nav-item" link="contact"><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="body-item jumbotron" id="home">
+        <h1>WebServer - 1.0</h1>
+        <p class="lead">WebServer - 1.0, was created as a initiation exercise at Adobe India Pvt. Limited, Nodia, to get the author acquainted with industry development practices and the technologies used at Adobe.</p>
+        <a class="btn btn-large btn-success" href="#">Download Now!</a>
+      </div>
+      <div class="body-item jumbotron hide" id="documentation">
+			<div class="span12">
+				<div class="span3"><a href="#" class="doc-file" link="/admin/readme.txt"> Read Me!		</a></div>
+				<div class="span3"><a href="#" class="doc-file">Installation	</a></div>
+				<div class="span3"><a href="#" class="doc-file">Project		</a></div>
+				<hr>
+			</div>
+			<iframe id="doc-iframe" src="/admin/readme.txt" frameBorder="0" class="span12">
+			</iframe>
+      </div>
+      <div class="body-item jumbotron hide" id="javadocs">
+		
+			<iframe id="javadoc-iframe" src="/asdsafda" frameBorder="0" class="span12">
+			</iframe>
+
+      </div>
+      <div class="body-item jumbotron hide" id="activity">
+		<h2 >
+			Server Current Activity
+		</h2>
+		<br/>
+		<div >
+		<a class="btn btn-large btn-success" href="#" onclick="getLog();"><i class="icon-refresh icon-white icon-large"></i> Refresh</a>
+		<p>Click  to update.</p>
+		</div>
+		<div class="well activity-pane">
+		<table id="activity-table">
+		</table>
+        </div>
+      </div>
+	  <div class="body-item hide" id="admin">
+		<p >View and organize files at the server.</p>
+		<div class="browser well">
+		</div>
+		<div class="jumbotron well" style="overflow:auto">
+			<iframe src="" id="file-iframe"	frameBorder="0" class="content span11">
+			</iframe>
+		</div>
+	  </div>
+      
+	   <div class="body-item jumbotron hide" id="contact">
+		<div class="well">
+		<h4>Contact Info:</h4>	
+		<p class="left">
+			<b>
+				Webmaster:
+			</b>
+			<i>mahaur@adobe.com</i>
+			<br/>
+			<b>Author Info:</b>
+			<br/>
+			Name:<i>Ramanshu Mahaur</i><br/>
+			Email:<i><a href="maharamanshu@gmail.com" target="mail_to">maharamanshu@gmail.com</a></i></br>
+			Mobile:<i>+91 8010246046</i><br/>
+		</p>
+        </div>
+      </div>
+	
+      <hr>
+
+      <!-- Example row of columns -->
+      <div class="row-fluid hide">
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <p>&copy; Ramanshu Mahaur</p>
+      </div>
+
+    </div> 
+    <script src="css/bootstrap/js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+	<script>
+		$(".nav-item").click(function( event) {
+				var current = $(this).attr('link');
+				$(this).addClass("active");
+				$(".nav-item").not($(this)).removeClass("active");
+				var item = $("#"+current);
+				$(".body-item").not(item).hide();
+				item.show();
+        });
+		function scrollGo()
+		{
+				var x= $(this).offset().top()-100;
+			$( 'html,body' ).animate({scrollTop:x},500);
+			
+		}
+		
+		function setBrowser(url)
+		{
+		$.get('/admin/list/?url='+url, function(data) {
+		$('.browser').html(data);
+			$(".view-file").click(function(event){
+				var isDirectory = $(this).attr('type');
+				var link = $(this).attr('link');
+				if(isDirectory=='false')
+				{
+					$("#file-iframe").attr('src',link);
+					$("#file-iframe").focus(scrollGo);//$("#file-iframe").attr("tabindex",1).focus();
+				}
+				else
+				{
+					setBrowser(link);
+				}
+			});
+	});
+		}
+
+		setBrowser('%2F');
+		function getLog()
+		{
+		$.get('/admin/activity/', function(data) {
+			list = data.split('\n');
+			data2="";
+			for(i=0;i<list.length;i++)
+			data2+= "<tr><td class=\"pull-left\">"+list[i]+"</td></tr>\n";
+			$("#activity-table").html(data2);
+			
+		});
+			
+		}
+		
+		getLog();
+		
+		$(".doc-file").click(function(event){
+				var link = $(this).attr('link');
+				alert(link);
+				$("#doc-iframe").attr('src',link);
+				$("#doc-iframe").focus(scrollGo);
+			});
+	</script>
+
+  </body>
+</html>
