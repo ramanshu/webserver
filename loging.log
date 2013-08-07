@@ -1,0 +1,680 @@
+2013-08-05 13:34:08 - Starting server on port 80
+2013-08-05 13:50:09 - Starting server on port 80
+2013-08-05 13:50:27 - URL /admin/ 302 18ms 
+2013-08-05 13:50:27 - URL /admin/index.html 200 23ms 
+2013-08-05 13:50:27 - URL /admin/css/bootstrap/css/bootstrap.css 200 13ms 
+2013-08-05 13:50:27 - URL /admin/css/bootstrap/js/bootstrap.js 200 3ms 
+2013-08-05 13:50:27 - URL /admin/js/jquery.js 200 4ms 
+2013-08-05 13:50:27 - URL /admin/javadocs/index.html 200 3ms 
+2013-08-05 13:50:27 - URL /admin/readme.txt 200 44ms 
+2013-08-05 13:50:27 - URL /admin/activity/ 200 3ms 
+2013-08-05 13:50:27 - URL /admin/javadocs/allclasses-frame.html 200 3ms 
+2013-08-05 13:50:27 - URL /admin/javadocs/com/adobe/web/algorithm/package-summary.html 200 4ms 
+2013-08-05 13:50:27 - URL /admin/list/ 200 28ms 
+2013-08-05 13:50:27 - URL /admin/javadocs/stylesheet.css 200 7ms 
+2013-08-05 13:50:27 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-05 13:50:27 - URL /favicon.ico 200 21ms 
+2013-08-05 13:50:27 - URL /favicon.ico 200 3ms 
+2013-08-05 18:52:36 - Starting server on port 80
+2013-08-05 18:52:53 - URL /admin/index.html 404 34ms 
+2013-08-05 18:53:00 - URL /admin 404 13ms 
+2013-08-05 18:53:05 - URL /admin/admin/ 302 19ms 
+2013-08-05 18:53:05 - URL /admin/admin/index.html 404 5ms 
+2013-08-05 18:53:37 - URL /admin/index.html 404 12ms 
+2013-08-05 18:53:55 - URL /temp/index.html 200 10ms 
+2013-08-05 19:07:34 - Starting server on port 80
+2013-08-05 19:07:41 - URL /admin/index.html 200 8ms 
+2013-08-05 19:07:41 - URL /admin/css/bootstrap/css/bootstrap.css 200 11ms 
+2013-08-05 19:07:41 - URL /admin/readme.txt 200 9ms 
+2013-08-05 19:07:41 - URL /admin/javadocs/index.html 200 25ms 
+2013-08-05 19:07:41 - URL /admin/css/bootstrap/js/bootstrap.js 200 10ms 
+2013-08-05 19:07:41 - URL /admin/js/jquery.js 200 28ms 
+2013-08-05 19:07:41 - URL /admin/javadocs/allclasses-frame.html 200 15ms 
+2013-08-05 19:07:41 - URL /admin/javadocs/com/adobe/web/algorithm/package-summary.html 200 16ms 
+2013-08-05 19:07:41 - URL /admin/activity/ 200 5ms 
+2013-08-05 19:07:41 - URL /admin/javadocs/stylesheet.css 200 12ms 
+2013-08-05 19:07:41 - URL /admin/javadocs/stylesheet.css 200 21ms 
+2013-08-05 19:07:41 - URL /favicon.ico 200 14ms 
+2013-08-05 19:07:41 - URL /admin/list/ 200 97ms 
+2013-08-05 19:15:55 - Starting server on port 80
+2013-08-05 19:15:58 - URL /admin/index.html 404 15ms 
+2013-08-05 19:15:58 - URL /favicon.ico 200 29ms 
+2013-08-05 19:15:58 - URL /favicon.ico 200 16ms 
+2013-08-05 19:15:59 - URL /admin/index.html 404 6ms 
+2013-08-05 19:15:59 - URL /favicon.ico 200 7ms 
+2013-08-05 19:15:59 - URL /favicon.ico 200 3ms 
+2013-08-05 19:16:00 - URL /admin/index.html 404 24ms 
+2013-08-05 19:16:00 - URL /favicon.ico 200 2ms 
+2013-08-05 19:16:00 - URL /favicon.ico 200 6ms 
+2013-08-05 19:16:00 - URL /admin/index.html 404 4ms 
+2013-08-05 19:16:00 - URL /favicon.ico 200 3ms 
+2013-08-05 19:16:00 - URL /favicon.ico 200 2ms 
+2013-08-05 19:16:00 - URL /admin/index.html 404 3ms 
+2013-08-05 19:16:00 - URL /favicon.ico 200 3ms 
+2013-08-05 19:16:00 - URL /favicon.ico 200 18ms 
+2013-08-05 19:16:01 - URL /admin/index.html 404 3ms 
+2013-08-05 19:16:01 - URL /favicon.ico 200 25ms 
+2013-08-05 19:16:01 - URL /favicon.ico 200 10ms 
+2013-08-05 19:16:01 - URL /admin/index.html 404 2ms 
+2013-08-05 19:16:01 - URL /favicon.ico 200 10ms 
+2013-08-05 19:16:01 - URL /favicon.ico 200 6ms 
+2013-08-05 19:16:01 - URL /admin/index.html 404 2ms 
+2013-08-05 19:16:02 - URL /favicon.ico 200 3ms 
+2013-08-05 19:16:02 - URL /favicon.ico 200 5ms 
+2013-08-05 19:16:02 - URL /admin/index.html 404 4ms 
+2013-08-05 19:16:02 - URL /favicon.ico 200 10ms 
+2013-08-05 19:16:02 - URL /favicon.ico 200 4ms 
+2013-08-05 19:16:58 - Starting server on port 80
+2013-08-05 19:17:03 - URL /admin/index.html 404 13ms 
+2013-08-05 19:17:03 - URL /favicon.ico 200 27ms 
+2013-08-05 19:17:03 - URL /favicon.ico 200 3ms 
+2013-08-05 19:17:14 - URL /admin/index.html 404 5ms 
+2013-08-05 19:17:14 - URL /favicon.ico 200 10ms 
+2013-08-05 19:17:14 - URL /favicon.ico 200 2ms 
+2013-08-05 19:17:15 - URL /admin/index.html 404 3ms 
+2013-08-05 19:17:15 - URL /favicon.ico 200 12ms 
+2013-08-05 19:17:15 - URL /favicon.ico 200 21ms 
+2013-08-05 19:17:15 - URL /admin/index.html 404 5ms 
+2013-08-05 19:17:15 - URL /favicon.ico 200 12ms 
+2013-08-05 19:17:15 - URL /favicon.ico 200 5ms 
+2013-08-05 19:17:44 - Starting server on port 80
+2013-08-05 19:17:48 - URL /admin/index.html 404 24ms 
+2013-08-05 19:17:48 - URL /favicon.ico 200 25ms 
+2013-08-05 19:17:48 - URL /favicon.ico 200 18ms 
+2013-08-05 19:17:49 - URL /admin/index.html 404 5ms 
+2013-08-05 19:17:49 - URL /favicon.ico 200 3ms 
+2013-08-05 19:17:49 - URL /favicon.ico 200 8ms 
+2013-08-06 13:46:19 - Starting server on port 80
+2013-08-06 13:46:22 - URL /admin/index.html 404 13ms 
+2013-08-06 13:55:54 - URL /admin/index.html 404 2ms 
+2013-08-06 13:55:54 - URL /favicon.ico 200 37ms 
+2013-08-06 13:55:54 - URL /favicon.ico 200 4ms 
+2013-08-06 13:55:56 - URL /admin/index.html 404 3ms 
+2013-08-06 13:55:56 - URL /favicon.ico 200 1ms 
+2013-08-06 13:55:56 - URL /favicon.ico 200 9ms 
+2013-08-06 13:55:57 - URL /admin/index.html 404 8ms 
+2013-08-06 13:55:57 - URL /favicon.ico 200 11ms 
+2013-08-06 13:55:57 - URL /favicon.ico 200 14ms 
+2013-08-06 13:55:58 - URL /admin/index.html 404 4ms 
+2013-08-06 13:55:58 - URL /favicon.ico 200 2ms 
+2013-08-06 13:55:58 - URL /favicon.ico 200 8ms 
+2013-08-06 13:55:59 - URL /admin/index.html 404 6ms 
+2013-08-06 13:55:59 - URL /favicon.ico 200 9ms 
+2013-08-06 13:55:59 - URL /favicon.ico 200 3ms 
+2013-08-06 13:59:30 - Starting server on port 80
+2013-08-06 13:59:36 - URL /admin/index.html 200 24ms 
+2013-08-06 13:59:36 - URL /admin/css/bootstrap/css/bootstrap.css 200 28ms 
+2013-08-06 13:59:36 - URL /admin/javadocs/index.html 200 26ms 
+2013-08-06 13:59:36 - URL /admin/readme.txt 200 49ms 
+2013-08-06 13:59:36 - URL /admin/css/bootstrap/js/bootstrap.js 200 51ms 
+2013-08-06 13:59:36 - URL /admin/js/jquery.js 200 57ms 
+2013-08-06 13:59:36 - URL /admin/javadocs/allclasses-frame.html 200 60ms 
+2013-08-06 13:59:36 - URL /admin/javadocs/com/adobe/web/algorithm/package-summary.html 200 66ms 
+2013-08-06 13:59:36 - URL /admin/activity/ 200 52ms 
+2013-08-06 13:59:36 - URL /admin/javadocs/stylesheet.css 200 9ms 
+2013-08-06 13:59:36 - URL /admin/list/ 200 57ms 
+2013-08-06 13:59:37 - URL /admin/javadocs/stylesheet.css 200 95ms 
+2013-08-06 13:59:37 - URL /favicon.ico 200 10ms 
+2013-08-06 13:59:37 - URL /favicon.ico 200 14ms 
+2013-08-06 14:00:23 - Starting server on port 80
+2013-08-06 14:00:26 - URL /admin/index.html 404 5ms 
+2013-08-06 14:00:26 - URL /favicon.ico 200 28ms 
+2013-08-06 14:00:26 - URL /favicon.ico 200 6ms 
+2013-08-06 14:00:27 - URL /admin/index.html 404 24ms 
+2013-08-06 14:00:27 - URL /favicon.ico 200 2ms 
+2013-08-06 14:00:27 - URL /favicon.ico 200 23ms 
+2013-08-06 14:00:28 - URL /admin/index.html 404 3ms 
+2013-08-06 14:00:28 - URL /favicon.ico 200 2ms 
+2013-08-06 14:00:28 - URL /favicon.ico 200 43ms 
+2013-08-06 14:00:28 - URL /admin/index.html 404 3ms 
+2013-08-06 14:00:29 - URL /favicon.ico 200 14ms 
+2013-08-06 14:00:29 - URL /favicon.ico 200 4ms 
+2013-08-06 14:00:29 - URL /admin/index.html 404 4ms 
+2013-08-06 14:00:29 - URL /favicon.ico 200 4ms 
+2013-08-06 14:00:29 - URL /favicon.ico 200 6ms 
+2013-08-06 14:00:58 - Starting server on port 80
+2013-08-06 14:01:01 - URL /admin/index.html 404 19ms 
+2013-08-06 14:01:01 - URL /favicon.ico 200 15ms 
+2013-08-06 14:01:01 - URL /favicon.ico 200 6ms 
+2013-08-06 14:01:02 - URL /admin/index.html 404 3ms 
+2013-08-06 14:01:02 - URL /favicon.ico 200 9ms 
+2013-08-06 14:01:02 - URL /favicon.ico 200 34ms 
+2013-08-06 14:01:03 - URL /admin/index.html 404 3ms 
+2013-08-06 14:01:03 - URL /favicon.ico 200 4ms 
+2013-08-06 14:01:03 - URL /favicon.ico 200 41ms 
+2013-08-06 14:01:04 - URL /admin/index.html 404 3ms 
+2013-08-06 14:01:04 - URL /favicon.ico 200 3ms 
+2013-08-06 14:01:04 - URL /favicon.ico 200 6ms 
+2013-08-06 14:01:05 - URL /admin/index.html 404 2ms 
+2013-08-06 14:01:05 - URL /favicon.ico 200 24ms 
+2013-08-06 14:01:05 - URL /favicon.ico 200 3ms 
+2013-08-06 14:01:06 - URL /admin/index.html 404 1ms 
+2013-08-06 14:01:06 - URL /favicon.ico 200 5ms 
+2013-08-06 14:01:06 - URL /favicon.ico 200 26ms 
+2013-08-06 14:01:43 - Starting server on port 80
+2013-08-06 14:01:46 - URL /admin/index.html 404 15ms 
+2013-08-06 14:01:46 - URL /favicon.ico 200 16ms 
+2013-08-06 14:01:46 - URL /favicon.ico 200 14ms 
+2013-08-06 14:02:31 - Starting server on port 80
+2013-08-06 14:03:28 - Starting server on port 80
+2013-08-06 14:03:30 - URL /admin/index.html 404 21ms 
+2013-08-06 14:04:08 - Starting server on port 80
+2013-08-06 14:04:12 - URL /admin/index.html 404 10ms 
+2013-08-06 14:04:12 - URL /favicon.ico 200 16ms 
+2013-08-06 14:04:12 - URL /favicon.ico 200 13ms 
+2013-08-06 14:04:14 - URL /admin/index.html 404 4ms 
+2013-08-06 14:04:14 - URL /favicon.ico 200 8ms 
+2013-08-06 14:04:14 - URL /favicon.ico 200 4ms 
+2013-08-06 14:04:15 - URL /admin/index.html 404 2ms 
+2013-08-06 14:04:15 - URL /favicon.ico 200 7ms 
+2013-08-06 14:04:15 - URL /favicon.ico 200 3ms 
+2013-08-06 14:04:15 - URL /admin/index.html 404 6ms 
+2013-08-06 14:04:16 - URL /favicon.ico 200 14ms 
+2013-08-06 14:04:16 - URL /favicon.ico 200 6ms 
+2013-08-06 14:05:53 - Starting server on port 80
+2013-08-06 14:05:58 - URL /admin/index.html 200 15ms 
+2013-08-06 14:05:58 - URL /admin/javadocs/index.html 200 22ms 
+2013-08-06 14:05:58 - URL /admin/js/jquery.js 200 30ms 
+2013-08-06 14:05:58 - URL /admin/readme.txt 200 27ms 
+2013-08-06 14:05:58 - URL /admin/css/bootstrap/css/bootstrap.css 200 24ms 
+2013-08-06 14:05:58 - URL /admin/css/bootstrap/js/bootstrap.js 200 82ms 
+2013-08-06 14:05:58 - URL /admin/javadocs/allclasses-frame.html 200 47ms 
+2013-08-06 14:05:58 - URL /admin/javadocs/com/adobe/web/algorithm/package-summary.html 200 72ms 
+2013-08-06 14:05:58 - URL /admin/javadocs/stylesheet.css 200 11ms 
+2013-08-06 14:05:58 - URL /admin/activity/ 200 35ms 
+2013-08-06 14:05:58 - URL /admin/javadocs/stylesheet.css 200 31ms 
+2013-08-06 14:05:58 - URL /favicon.ico 200 24ms 
+2013-08-06 14:05:58 - URL /favicon.ico 200 2ms 
+2013-08-06 14:06:19 - Starting server on port 80
+2013-08-06 14:06:25 - URL /admin/index.html 200 22ms 
+2013-08-06 14:06:25 - URL /admin/readme.txt 200 14ms 
+2013-08-06 14:06:25 - URL /admin/javadocs/index.html 200 30ms 
+2013-08-06 14:06:25 - URL /admin/css/bootstrap/css/bootstrap.css 200 34ms 
+2013-08-06 14:06:25 - URL /admin/css/bootstrap/js/bootstrap.js 200 54ms 
+2013-08-06 14:06:25 - URL /admin/javadocs/com/adobe/web/algorithm/package-summary.html 200 63ms 
+2013-08-06 14:06:25 - URL /admin/javadocs/allclasses-frame.html 200 83ms 
+2013-08-06 14:06:25 - URL /admin/js/jquery.js 200 107ms 
+2013-08-06 14:06:26 - URL /admin/javadocs/stylesheet.css 200 45ms 
+2013-08-06 14:06:26 - URL /admin/javadocs/stylesheet.css 200 105ms 
+2013-08-06 14:06:26 - URL /admin/list/ 200 28ms 
+2013-08-06 14:06:26 - URL /admin/activity/ 200 3ms 
+2013-08-06 14:06:26 - URL /favicon.ico 200 14ms 
+2013-08-06 14:06:26 - URL /favicon.ico 200 2ms 
+2013-08-06 14:06:57 - Starting server on port 80
+2013-08-06 14:07:02 - URL /admin/index.html 200 16ms 
+2013-08-06 14:07:02 - URL /admin/css/bootstrap/css/bootstrap.css 200 45ms 
+2013-08-06 14:07:02 - URL /admin/readme.txt 200 36ms 
+2013-08-06 14:07:02 - URL /admin/javadocs/index.html 200 36ms 
+2013-08-06 14:07:02 - URL /admin/css/bootstrap/js/bootstrap.js 200 60ms 
+2013-08-06 14:07:02 - URL /admin/js/jquery.js 200 72ms 
+2013-08-06 14:07:02 - URL /admin/javadocs/allclasses-frame.html 200 73ms 
+2013-08-06 14:07:02 - URL /admin/javadocs/com/adobe/web/algorithm/package-summary.html 200 95ms 
+2013-08-06 14:07:02 - URL /admin/activity/ 200 4ms 
+2013-08-06 14:07:02 - URL /admin/list/ 200 68ms 
+2013-08-06 14:07:02 - URL /admin/javadocs/stylesheet.css 200 14ms 
+2013-08-06 14:07:02 - URL /admin/javadocs/stylesheet.css 200 35ms 
+2013-08-06 14:07:02 - URL /favicon.ico 200 27ms 
+2013-08-06 14:07:02 - URL /favicon.ico 200 5ms 
+2013-08-06 14:10:08 - Starting server on port 80
+2013-08-06 14:10:10 - URL /admin/index.html 200 30ms 
+2013-08-06 14:10:11 - URL /admin/readme.txt 200 12ms 
+2013-08-06 14:10:11 - URL /admin/javadocs/index.html 200 14ms 
+2013-08-06 14:10:11 - URL /admin/css/bootstrap/js/bootstrap.js 200 14ms 
+2013-08-06 14:10:11 - URL /admin/css/bootstrap/css/bootstrap.css 200 43ms 
+2013-08-06 14:10:11 - URL /admin/js/jquery.js 200 46ms 
+2013-08-06 14:10:11 - URL /admin/javadocs/com/adobe/web/algorithm/package-summary.html 200 13ms 
+2013-08-06 14:10:11 - URL /admin/javadocs/allclasses-frame.html 200 7ms 
+2013-08-06 14:10:11 - URL /admin/activity/ 200 18ms 
+2013-08-06 14:10:11 - URL /admin/list/ 200 27ms 
+2013-08-06 14:10:11 - URL /admin/javadocs/stylesheet.css 200 17ms 
+2013-08-06 14:10:11 - URL /admin/javadocs/resources/background.gif 200 5ms 
+2013-08-06 14:10:11 - URL /admin/javadocs/resources/titlebar.gif 200 6ms 
+2013-08-06 14:10:11 - URL /admin/javadocs/resources/titlebar_end.gif 200 5ms 
+2013-08-06 14:10:12 - URL /admin/css/bootstrap/img/glyphicons-halflings-white.png 200 2ms 
+2013-08-06 14:10:14 - URL /admin/activity/ 200 11ms 
+2013-08-06 14:10:14 - URL /admin/activity/ 200 4ms 
+2013-08-06 14:10:16 - URL /admin/activity/ 200 2ms 
+2013-08-06 14:10:18 - URL /admin/activity/ 200 8ms 
+2013-08-06 14:19:08 - Starting server on port 80
+2013-08-06 14:19:08 - URL /admin/index.html 200 7ms 
+2013-08-06 14:19:08 - URL /admin/css/bootstrap/css/bootstrap.css 200 6ms 
+2013-08-06 14:19:08 - URL /admin/css/bootstrap/js/bootstrap.js 200 29ms 
+2013-08-06 14:19:08 - URL /admin/javadocs/index.html 200 71ms 
+2013-08-06 14:19:09 - URL /admin/js/jquery.js 200 127ms 
+2013-08-06 14:19:09 - URL /admin/readme.txt 200 128ms 
+2013-08-06 14:19:09 - URL /admin/activity/ 200 52ms 
+2013-08-06 14:19:09 - URL /admin/list/ 200 103ms 
+2013-08-06 14:19:09 - URL /admin/javadocs/allclasses-frame.html 200 57ms 
+2013-08-06 14:19:09 - URL /admin/javadocs/com/adobe/web/algorithm/package-summary.html 200 83ms 
+2013-08-06 14:19:09 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 14:19:09 - URL /admin/javadocs/stylesheet.css 200 6ms 
+2013-08-06 14:19:12 - URL /admin/javadocs/resources/titlebar.gif 200 10ms 
+2013-08-06 14:19:12 - URL /admin/javadocs/resources/background.gif 200 11ms 
+2013-08-06 14:19:12 - URL /admin/javadocs/resources/titlebar_end.gif 200 6ms 
+2013-08-06 14:19:12 - URL /admin/javadocs/resources/background.gif 200 7ms 
+2013-08-06 14:19:33 - Starting server on port : 80
+2013-08-06 14:19:35 - URL /admin/index.html 200 10ms 
+2013-08-06 14:19:35 - URL /admin/readme.txt 200 22ms 
+2013-08-06 14:19:35 - URL /admin/css/bootstrap/css/bootstrap.css 200 44ms 
+2013-08-06 14:19:35 - URL /admin/javadocs/index.html 200 59ms 
+2013-08-06 14:19:35 - URL /admin/js/jquery.js 200 13ms 
+2013-08-06 14:19:35 - URL /admin/css/bootstrap/js/bootstrap.js 200 63ms 
+2013-08-06 14:19:36 - URL /admin/javadocs/overview-summary.html 200 39ms 
+2013-08-06 14:19:36 - URL /admin/javadocs/overview-frame.html 200 77ms 
+2013-08-06 14:19:36 - URL /admin/activity/ 200 3ms 
+2013-08-06 14:19:36 - URL /admin/javadocs/stylesheet.css 200 30ms 
+2013-08-06 14:19:36 - URL /admin/list/ 200 83ms 
+2013-08-06 14:19:36 - URL /admin/javadocs/stylesheet.css 200 91ms 
+2013-08-06 14:19:37 - URL /admin/javadocs/resources/background.gif 200 1ms 
+2013-08-06 14:19:37 - URL /admin/javadocs/resources/titlebar.gif 200 5ms 
+2013-08-06 14:19:37 - URL /admin/javadocs/resources/titlebar_end.gif 200 12ms 
+2013-08-06 14:19:37 - URL /admin/javadocs/resources/tab.gif 200 23ms 
+2013-08-06 14:19:53 - URL /admin/javadocs/com/adobe/web/algorithm/package-frame.html 200 3ms 
+2013-08-06 14:19:53 - URL /admin/javadocs/stylesheet.css 200 6ms 
+2013-08-06 14:19:53 - URL /admin/javadocs/resources/background.gif 200 4ms 
+2013-08-06 14:19:55 - URL /admin/javadocs/com/adobe/web/client/package-frame.html 200 6ms 
+2013-08-06 14:19:55 - URL /admin/javadocs/stylesheet.css 200 15ms 
+2013-08-06 14:19:55 - URL /admin/javadocs/resources/background.gif 200 5ms 
+2013-08-06 14:19:56 - URL /admin/javadocs/com/adobe/web/protocol/package-frame.html 200 11ms 
+2013-08-06 14:19:56 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 14:19:56 - URL /admin/javadocs/resources/background.gif 200 7ms 
+2013-08-06 14:20:28 - Starting server on port : 80
+2013-08-06 14:20:32 - URL /admin/index.html 200 21ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/index.html 200 23ms 
+2013-08-06 14:20:32 - URL /admin/readme.txt 200 24ms 
+2013-08-06 14:20:32 - URL /admin/css/bootstrap/js/bootstrap.js 200 28ms 
+2013-08-06 14:20:32 - URL /admin/css/bootstrap/css/bootstrap.css 200 48ms 
+2013-08-06 14:20:32 - URL /admin/js/jquery.js 200 46ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/overview-frame.html 200 7ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/overview-summary.html 200 7ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/allclasses-frame.html 200 9ms 
+2013-08-06 14:20:32 - URL /admin/activity/ 200 3ms 
+2013-08-06 14:20:32 - URL /admin/list/ 200 22ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/stylesheet.css 200 4ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/resources/background.gif 200 6ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/resources/tab.gif 200 5ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/resources/titlebar_end.gif 200 6ms 
+2013-08-06 14:20:32 - URL /admin/javadocs/resources/titlebar.gif 200 8ms 
+2013-08-06 14:20:36 - URL /admin/javadocs/com/adobe/web/protocol/FileObject.html 200 11ms 
+2013-08-06 14:20:36 - URL /admin/javadocs/stylesheet.css 200 4ms 
+2013-08-06 14:20:36 - URL /admin/javadocs/resources/background.gif 200 6ms 
+2013-08-06 14:20:36 - URL /admin/javadocs/resources/tab.gif 200 7ms 
+2013-08-06 14:20:36 - URL /admin/javadocs/resources/titlebar_end.gif 200 6ms 
+2013-08-06 14:20:36 - URL /admin/javadocs/resources/titlebar.gif 200 7ms 
+2013-08-06 14:20:37 - URL /admin/javadocs/com/adobe/web/standards/HttpContentTypes.html 200 21ms 
+2013-08-06 14:20:37 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 14:20:37 - URL /admin/javadocs/resources/tab.gif 200 14ms 
+2013-08-06 14:20:37 - URL /admin/javadocs/resources/titlebar_end.gif 200 8ms 
+2013-08-06 14:20:37 - URL /admin/javadocs/resources/background.gif 200 20ms 
+2013-08-06 14:20:37 - URL /admin/javadocs/resources/titlebar.gif 200 17ms 
+2013-08-06 14:20:38 - URL /admin/javadocs/com/adobe/web/server/HttpRequestProcessor.html 200 5ms 
+2013-08-06 14:20:38 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 14:20:38 - URL /admin/javadocs/resources/background.gif 200 2ms 
+2013-08-06 14:20:38 - URL /admin/javadocs/resources/tab.gif 200 2ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/com/adobe/web/standards/HttpResponseCodes.html 200 5ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/stylesheet.css 200 6ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/resources/tab.gif 200 4ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/resources/titlebar.gif 200 4ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/resources/titlebar_end.gif 200 2ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/resources/background.gif 200 5ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/com/adobe/web/client/HttpWebClient.html 200 7ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/resources/background.gif 200 8ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/resources/titlebar.gif 200 5ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/resources/titlebar_end.gif 200 4ms 
+2013-08-06 14:20:39 - URL /admin/javadocs/resources/tab.gif 200 8ms 
+2013-08-06 14:20:40 - URL /admin/javadocs/com/adobe/web/protocol/HttpWebRequest.html 200 6ms 
+2013-08-06 14:20:40 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 14:20:40 - URL /admin/javadocs/resources/background.gif 200 7ms 
+2013-08-06 14:20:40 - URL /admin/javadocs/resources/titlebar.gif 200 3ms 
+2013-08-06 14:20:40 - URL /admin/javadocs/resources/titlebar_end.gif 200 3ms 
+2013-08-06 14:20:40 - URL /admin/javadocs/resources/tab.gif 200 11ms 
+2013-08-06 14:20:41 - URL /admin/javadocs/com/adobe/web/server/HttpWebServer.html 200 15ms 
+2013-08-06 14:20:41 - URL /admin/javadocs/stylesheet.css 200 5ms 
+2013-08-06 14:20:41 - URL /admin/javadocs/resources/background.gif 200 3ms 
+2013-08-06 14:20:41 - URL /admin/javadocs/resources/tab.gif 200 5ms 
+2013-08-06 14:20:41 - URL /admin/javadocs/resources/titlebar_end.gif 200 7ms 
+2013-08-06 14:20:41 - URL /admin/javadocs/resources/titlebar.gif 200 7ms 
+2013-08-06 14:20:48 - URL /admin/javadocs/com/adobe/web/protocol/MIMEData.html 200 3ms 
+2013-08-06 14:20:48 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 14:20:48 - URL /admin/javadocs/resources/background.gif 200 2ms 
+2013-08-06 14:20:48 - URL /admin/javadocs/resources/tab.gif 200 2ms 
+2013-08-06 14:20:49 - URL /admin/javadocs/com/adobe/web/server/URIType.html 200 3ms 
+2013-08-06 14:20:49 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 14:20:49 - URL /admin/javadocs/resources/background.gif 200 5ms 
+2013-08-06 14:20:49 - URL /admin/javadocs/resources/tab.gif 200 4ms 
+2013-08-06 14:20:49 - URL /admin/javadocs/resources/titlebar.gif 200 6ms 
+2013-08-06 14:20:49 - URL /admin/javadocs/resources/titlebar_end.gif 200 4ms 
+2013-08-06 14:20:50 - URL /admin/javadocs/com/adobe/web/server/HttpWebServer.html 200 7ms 
+2013-08-06 14:20:50 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 14:20:50 - URL /admin/javadocs/resources/background.gif 200 6ms 
+2013-08-06 14:20:50 - URL /admin/javadocs/resources/tab.gif 200 5ms 
+2013-08-06 14:20:50 - URL /admin/javadocs/resources/titlebar.gif 200 5ms 
+2013-08-06 14:20:50 - URL /admin/javadocs/resources/titlebar_end.gif 200 3ms 
+2013-08-06 14:20:51 - URL /admin/javadocs/com/adobe/web/standards/HttpResponseCodes.html 200 2ms 
+2013-08-06 14:20:51 - URL /admin/javadocs/stylesheet.css 200 6ms 
+2013-08-06 14:20:51 - URL /admin/javadocs/resources/background.gif 200 4ms 
+2013-08-06 14:20:51 - URL /admin/javadocs/resources/tab.gif 200 4ms 
+2013-08-06 14:20:51 - URL /admin/javadocs/resources/titlebar_end.gif 200 3ms 
+2013-08-06 14:20:51 - URL /admin/javadocs/resources/titlebar.gif 200 5ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/com/adobe/web/standards/HttpContentTypes.html 200 3ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/background.gif 200 2ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/tab.gif 200 2ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/titlebar.gif 200 4ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/titlebar_end.gif 200 4ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/com/adobe/web/protocol/HttpWebRequest.html 200 4ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/stylesheet.css 200 4ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/tab.gif 200 2ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/background.gif 200 3ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/titlebar_end.gif 200 1ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/titlebar.gif 200 4ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/com/adobe/web/protocol/HttpWebRequest.html 200 4ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/stylesheet.css 200 7ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/background.gif 200 3ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/tab.gif 200 3ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/titlebar.gif 200 3ms 
+2013-08-06 14:20:52 - URL /admin/javadocs/resources/titlebar_end.gif 200 2ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/com/adobe/web/server/HttpWebServerRun.html 200 4ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/resources/background.gif 200 4ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/resources/titlebar.gif 200 3ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/resources/tab.gif 200 6ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/resources/titlebar_end.gif 200 2ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/com/adobe/web/server/HttpWebServerRun.html 200 4ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/resources/background.gif 200 3ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/resources/tab.gif 200 3ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/resources/titlebar_end.gif 200 3ms 
+2013-08-06 14:20:53 - URL /admin/javadocs/resources/titlebar.gif 200 4ms 
+2013-08-06 14:45:01 - Starting server on port : 80
+2013-08-06 14:45:06 - URL /admin/index.html 200 21ms 
+2013-08-06 14:45:06 - URL /admin/readme.txt 200 25ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/index.html 200 30ms 
+2013-08-06 14:45:06 - URL /admin/css/bootstrap/css/bootstrap.css 200 32ms 
+2013-08-06 14:45:06 - URL /admin/css/bootstrap/js/bootstrap.js 200 31ms 
+2013-08-06 14:45:06 - URL /admin/js/jquery.js 200 43ms 
+2013-08-06 14:45:06 - URL /admin/activity/ 200 14ms 
+2013-08-06 14:45:06 - URL /admin/list/ 200 23ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/overview-frame.html 200 8ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/allclasses-frame.html 200 9ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/overview-summary.html 200 12ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/resources/background.gif 200 5ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/resources/tab.gif 200 6ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/resources/titlebar.gif 200 6ms 
+2013-08-06 14:45:06 - URL /admin/javadocs/resources/titlebar_end.gif 200 7ms 
+2013-08-06 14:45:08 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 9ms 
+2013-08-06 14:45:09 - URL /admin/css/bootstrap/img/glyphicons-halflings-white.png 200 6ms 
+2013-08-06 14:45:10 - URL /admin/activity/ 200 19ms 
+2013-08-06 14:45:37 - URL /admin/activity/ 200 7ms 
+2013-08-06 14:45:40 - URL /admin/activity/ 200 7ms 
+2013-08-06 14:47:15 - Starting server on port : 80
+2013-08-06 14:57:28 - Starting server on port : 80
+2013-08-06 14:57:43 - URL /admin/ 302 89ms 
+2013-08-06 14:57:43 - URL /admin/index.html 200 99ms 
+2013-08-06 14:57:43 - URL /admin/readme.txt 200 16ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/index.html 200 22ms 
+2013-08-06 14:57:43 - URL /admin/css/bootstrap/js/bootstrap.js 200 37ms 
+2013-08-06 14:57:43 - URL /admin/js/jquery.js 200 39ms 
+2013-08-06 14:57:43 - URL /admin/css/bootstrap/css/bootstrap.css 200 59ms 
+2013-08-06 14:57:43 - URL /admin/activity/ 200 4ms 
+2013-08-06 14:57:43 - URL /admin/list/ 200 27ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/overview-summary.html 200 5ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/allclasses-frame.html 200 6ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/overview-frame.html 200 10ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/resources/tab.gif 200 5ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/resources/background.gif 200 8ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/resources/titlebar.gif 200 5ms 
+2013-08-06 14:57:43 - URL /admin/javadocs/resources/titlebar_end.gif 200 4ms 
+2013-08-06 14:57:45 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 6ms 
+2013-08-06 14:59:59 - Starting server on port : 80
+2013-08-06 15:00:09 - URL /admin/index.html 200 13ms 
+2013-08-06 15:00:10 - URL /admin/readme.txt 200 15ms 
+2013-08-06 15:00:10 - URL /admin/javadocs/index.html 200 15ms 
+2013-08-06 15:00:10 - URL /admin/css/bootstrap/css/bootstrap.css 200 16ms 
+2013-08-06 15:00:10 - URL /admin/js/jquery.js 200 5ms 
+2013-08-06 15:00:10 - URL /admin/css/bootstrap/js/bootstrap.js 200 6ms 
+2013-08-06 15:00:10 - URL /admin/javadocs/overview-summary.html 200 7ms 
+2013-08-06 15:00:10 - URL /admin/javadocs/overview-frame.html 200 8ms 
+2013-08-06 15:00:10 - URL /admin/activity/ 200 3ms 
+2013-08-06 15:00:10 - URL /admin/javadocs/allclasses-frame.html 200 17ms 
+2013-08-06 15:00:10 - URL /admin/list/ 200 24ms 
+2013-08-06 15:00:10 - URL /admin/javadocs/stylesheet.css 200 9ms 
+2013-08-06 15:00:10 - URL /admin/javadocs/stylesheet.css 200 14ms 
+2013-08-06 15:00:10 - URL /admin/javadocs/stylesheet.css 200 4ms 
+2013-08-06 15:00:11 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 7ms 
+2013-08-06 15:00:26 - URL /admin/list/ 200 10ms 
+2013-08-06 15:02:39 - Starting server on port : 80
+2013-08-06 15:02:43 - URL /admin/index.html 200 8ms 
+2013-08-06 15:02:43 - URL /admin/readme.txt 200 8ms 
+2013-08-06 15:02:43 - URL /admin/css/bootstrap/css/bootstrap.css 200 9ms 
+2013-08-06 15:02:43 - URL /admin/javadocs/index.html 200 5ms 
+2013-08-06 15:02:43 - URL /admin/css/bootstrap/js/bootstrap.js 200 5ms 
+2013-08-06 15:02:43 - URL /admin/js/jquery.js 200 6ms 
+2013-08-06 15:02:43 - URL /admin/javadocs/overview-frame.html 200 19ms 
+2013-08-06 15:02:43 - URL /admin/javadocs/overview-summary.html 200 7ms 
+2013-08-06 15:02:43 - URL /admin/javadocs/allclasses-frame.html 200 21ms 
+2013-08-06 15:02:43 - URL /admin/activity/ 200 5ms 
+2013-08-06 15:02:43 - URL /admin/list/ 200 30ms 
+2013-08-06 15:02:43 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:02:43 - URL /admin/javadocs/stylesheet.css 200 6ms 
+2013-08-06 15:02:43 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:02:45 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 11ms 
+2013-08-06 15:02:58 - URL /admin/list/ 200 28ms 
+2013-08-06 15:04:42 - Starting server on port : 80
+2013-08-06 15:04:50 - URL /admin/index.html 200 23ms 
+2013-08-06 15:04:50 - URL /admin/javadocs/index.html 200 6ms 
+2013-08-06 15:04:50 - URL /admin/readme.txt 200 27ms 
+2013-08-06 15:04:50 - URL /admin/css/bootstrap/css/bootstrap.css 200 28ms 
+2013-08-06 15:04:50 - URL /admin/js/jquery.js 200 5ms 
+2013-08-06 15:04:50 - URL /admin/css/bootstrap/js/bootstrap.js 200 10ms 
+2013-08-06 15:04:50 - URL /admin/javadocs/allclasses-frame.html 200 36ms 
+2013-08-06 15:04:50 - URL /admin/javadocs/overview-frame.html 200 37ms 
+2013-08-06 15:04:50 - URL /admin/javadocs/overview-summary.html 200 4ms 
+2013-08-06 15:04:50 - URL /admin/activity/ 200 5ms 
+2013-08-06 15:04:50 - URL /admin/list/ 200 35ms 
+2013-08-06 15:04:50 - URL /admin/javadocs/stylesheet.css 200 20ms 
+2013-08-06 15:04:50 - URL /admin/javadocs/stylesheet.css 200 33ms 
+2013-08-06 15:04:50 - URL /admin/javadocs/stylesheet.css 200 4ms 
+2013-08-06 15:04:51 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 10ms 
+2013-08-06 15:06:19 - Starting server on port : 80
+2013-08-06 15:06:21 - URL /admin/upload/ 302 17ms 
+2013-08-06 15:06:21 - URL /admin/upload/index.html 404 3ms 
+2013-08-06 15:06:27 - URL /admin/index.html 200 11ms 
+2013-08-06 15:06:27 - URL /admin/readme.txt 200 7ms 
+2013-08-06 15:06:27 - URL /admin/css/bootstrap/css/bootstrap.css 200 9ms 
+2013-08-06 15:06:27 - URL /admin/javadocs/index.html 200 5ms 
+2013-08-06 15:06:27 - URL /admin/js/jquery.js 200 4ms 
+2013-08-06 15:06:27 - URL /admin/css/bootstrap/js/bootstrap.js 200 6ms 
+2013-08-06 15:06:27 - URL /admin/javadocs/overview-frame.html 200 6ms 
+2013-08-06 15:06:27 - URL /admin/javadocs/allclasses-frame.html 200 15ms 
+2013-08-06 15:06:27 - URL /admin/javadocs/overview-summary.html 200 5ms 
+2013-08-06 15:06:27 - URL /admin/activity/ 200 4ms 
+2013-08-06 15:06:27 - URL /admin/list/ 200 29ms 
+2013-08-06 15:06:27 - URL /admin/javadocs/stylesheet.css 200 30ms 
+2013-08-06 15:06:27 - URL /admin/javadocs/stylesheet.css 200 4ms 
+2013-08-06 15:06:27 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:06:28 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 9ms 
+2013-08-06 15:07:46 - Starting server on port : 80
+2013-08-06 15:08:54 - Starting server on port : 80
+2013-08-06 15:09:20 - Starting server on port : 80
+2013-08-06 15:10:02 - URL /admin/ 302 10ms 
+2013-08-06 15:10:02 - URL /admin/index.html 200 5ms 
+2013-08-06 15:10:02 - URL /admin/javadocs/index.html 200 13ms 
+2013-08-06 15:10:02 - URL /admin/css/bootstrap/css/bootstrap.css 200 28ms 
+2013-08-06 15:10:02 - URL /admin/readme.txt 200 27ms 
+2013-08-06 15:10:02 - URL /admin/css/bootstrap/js/bootstrap.js 200 7ms 
+2013-08-06 15:10:02 - URL /admin/js/jquery.js 200 5ms 
+2013-08-06 15:10:02 - URL /admin/javadocs/allclasses-frame.html 200 16ms 
+2013-08-06 15:10:02 - URL /admin/javadocs/overview-frame.html 200 19ms 
+2013-08-06 15:10:02 - URL /admin/javadocs/overview-summary.html 200 5ms 
+2013-08-06 15:10:02 - URL /admin/activity/ 200 4ms 
+2013-08-06 15:10:02 - URL /admin/list/ 200 26ms 
+2013-08-06 15:10:02 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:10:02 - URL /admin/javadocs/stylesheet.css 200 8ms 
+2013-08-06 15:10:02 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:10:15 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 16ms 
+2013-08-06 15:10:55 - Starting server on port : 80
+2013-08-06 15:11:06 - URL /admin/index.html 200 7ms 
+2013-08-06 15:11:06 - URL /admin/readme.txt 200 5ms 
+2013-08-06 15:11:06 - URL /admin/css/bootstrap/css/bootstrap.css 200 8ms 
+2013-08-06 15:11:06 - URL /admin/js/jquery.js 200 5ms 
+2013-08-06 15:11:06 - URL /admin/css/bootstrap/js/bootstrap.js 200 6ms 
+2013-08-06 15:11:06 - URL /admin/javadocs/index.html 200 3ms 
+2013-08-06 15:11:06 - URL /admin/javadocs/overview-frame.html 200 10ms 
+2013-08-06 15:11:06 - URL /admin/javadocs/allclasses-frame.html 200 12ms 
+2013-08-06 15:11:06 - URL /admin/javadocs/overview-summary.html 200 12ms 
+2013-08-06 15:11:06 - URL /admin/activity/ 200 12ms 
+2013-08-06 15:11:06 - URL /admin/list/ 200 29ms 
+2013-08-06 15:11:06 - URL /admin/javadocs/stylesheet.css 200 16ms 
+2013-08-06 15:11:06 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 15:11:06 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:11:11 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 12ms 
+2013-08-06 15:11:53 - URL /admin/upload/ 302 3ms 
+2013-08-06 15:11:53 - URL /admin/upload/index.html 404 4ms 
+2013-08-06 15:14:05 - URL /admin/ 302 2ms 
+2013-08-06 15:14:05 - URL /admin/index.html 200 8ms 
+2013-08-06 15:14:05 - URL /admin/css/bootstrap/css/bootstrap.css 200 18ms 
+2013-08-06 15:14:05 - URL /admin/javadocs/index.html 200 7ms 
+2013-08-06 15:14:05 - URL /admin/readme.txt 200 20ms 
+2013-08-06 15:14:05 - URL /admin/css/bootstrap/js/bootstrap.js 200 7ms 
+2013-08-06 15:14:05 - URL /admin/js/jquery.js 200 12ms 
+2013-08-06 15:14:05 - URL /admin/javadocs/overview-frame.html 200 8ms 
+2013-08-06 15:14:05 - URL /admin/javadocs/allclasses-frame.html 200 15ms 
+2013-08-06 15:14:05 - URL /admin/activity/ 200 3ms 
+2013-08-06 15:14:05 - URL /admin/javadocs/overview-summary.html 200 29ms 
+2013-08-06 15:14:05 - URL /admin/javadocs/stylesheet.css 200 4ms 
+2013-08-06 15:14:05 - URL /admin/list/ 200 46ms 
+2013-08-06 15:14:05 - URL /admin/javadocs/stylesheet.css 200 10ms 
+2013-08-06 15:14:05 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 15:14:06 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 6ms 
+2013-08-06 15:18:43 - Starting server on port : 80
+2013-08-06 15:20:30 - Starting server on port : 80
+2013-08-06 15:21:08 - Starting server on port : 80
+2013-08-06 15:21:59 - Starting server on port : 80
+2013-08-06 15:23:15 - Starting server on port : 80
+2013-08-06 15:26:33 - Starting server on port : 80
+2013-08-06 15:26:44 - Starting server on port : 80
+2013-08-06 15:28:06 - Starting server on port : 80
+2013-08-06 15:28:53 - Starting server on port : 80
+2013-08-06 15:30:03 - Could not start server on port: 80. Looks like port is already in use.
+2013-08-06 15:30:05 - Could not start server on port: 80. Looks like port is already in use.
+2013-08-06 15:30:07 - Could not start server on port: 80. Looks like port is already in use.
+2013-08-06 15:30:14 - Could not start server on port: 80. Looks like port is already in use.
+2013-08-06 15:30:23 - Starting server on port : 80
+2013-08-06 15:32:07 - Starting server on port 80
+2013-08-06 15:33:11 - Starting server on port 80
+2013-08-06 15:33:22 - URL /admin/ 302 5ms 
+2013-08-06 15:33:23 - URL /admin/index.html 404 3ms 
+2013-08-06 15:33:27 - URL /admin/index.html 404 3ms 
+2013-08-06 15:33:28 - URL /admin/index.html 404 7ms 
+2013-08-06 15:33:28 - URL /admin/index.html 404 7ms 
+2013-08-06 15:33:29 - URL /admin/index.html 404 3ms 
+2013-08-06 15:33:30 - URL /admin/index.html 404 6ms 
+2013-08-06 15:34:13 - Starting server on port 80
+2013-08-06 15:34:16 - URL /admin/index.html 200 10ms 
+2013-08-06 15:34:16 - URL /admin/css/bootstrap/css/bootstrap.css 200 15ms 
+2013-08-06 15:34:16 - URL /admin/readme.txt 200 15ms 
+2013-08-06 15:34:16 - URL /admin/javadocs/index.html 200 18ms 
+2013-08-06 15:34:16 - URL /admin/css/bootstrap/js/bootstrap.js 200 5ms 
+2013-08-06 15:34:16 - URL /admin/js/jquery.js 200 8ms 
+2013-08-06 15:34:16 - URL /admin/javadocs/allclasses-frame.html 200 7ms 
+2013-08-06 15:34:16 - URL /admin/javadocs/overview-frame.html 200 11ms 
+2013-08-06 15:34:16 - URL /admin/activity/ 200 3ms 
+2013-08-06 15:34:16 - URL /admin/javadocs/stylesheet.css 200 6ms 
+2013-08-06 15:34:16 - URL /admin/javadocs/overview-summary.html 200 13ms 
+2013-08-06 15:34:16 - URL /admin/list/ 200 23ms 
+2013-08-06 15:34:16 - URL /admin/javadocs/stylesheet.css 200 6ms 
+2013-08-06 15:34:16 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:34:18 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 44ms 
+2013-08-06 15:34:20 - URL /admin/css/bootstrap/img/glyphicons-halflings-white.png 200 26ms 
+2013-08-06 15:34:57 - Starting server on port 80
+2013-08-06 15:34:59 - URL /admin/index.html 200 30ms 
+2013-08-06 15:34:59 - URL /admin/readme.txt 200 3ms 
+2013-08-06 15:34:59 - URL /admin/css/bootstrap/css/bootstrap.css 200 27ms 
+2013-08-06 15:34:59 - URL /admin/javadocs/index.html 200 6ms 
+2013-08-06 15:34:59 - URL /admin/css/bootstrap/js/bootstrap.js 200 5ms 
+2013-08-06 15:34:59 - URL /admin/js/jquery.js 200 7ms 
+2013-08-06 15:35:00 - URL /admin/javadocs/overview-frame.html 200 8ms 
+2013-08-06 15:35:00 - URL /admin/javadocs/overview-summary.html 200 6ms 
+2013-08-06 15:35:00 - URL /admin/javadocs/allclasses-frame.html 200 9ms 
+2013-08-06 15:35:00 - URL /admin/activity/ 200 3ms 
+2013-08-06 15:35:00 - URL /admin/list/ 200 25ms 
+2013-08-06 15:35:00 - URL /admin/javadocs/stylesheet.css 200 24ms 
+2013-08-06 15:35:00 - URL /admin/javadocs/stylesheet.css 200 29ms 
+2013-08-06 15:35:00 - URL /admin/javadocs/stylesheet.css 200 5ms 
+2013-08-06 15:37:01 - Starting server on port 80
+2013-08-06 15:37:07 - URL /admin/index.html 200 18ms 
+2013-08-06 15:37:07 - URL /admin/readme.txt 200 16ms 
+2013-08-06 15:37:07 - URL /admin/css/bootstrap/css/bootstrap.css 200 24ms 
+2013-08-06 15:37:07 - URL /admin/javadocs/index.html 200 4ms 
+2013-08-06 15:37:07 - URL /admin/css/bootstrap/js/bootstrap.js 200 4ms 
+2013-08-06 15:37:07 - URL /admin/js/jquery.js 200 6ms 
+2013-08-06 15:37:07 - URL /admin/javadocs/overview-frame.html 200 8ms 
+2013-08-06 15:37:07 - URL /admin/javadocs/allclasses-frame.html 200 8ms 
+2013-08-06 15:37:07 - URL /admin/activity/ 200 4ms 
+2013-08-06 15:37:07 - URL /admin/javadocs/overview-summary.html 200 19ms 
+2013-08-06 15:37:07 - URL /admin/javadocs/stylesheet.css 200 5ms 
+2013-08-06 15:37:07 - URL /admin/list/ 200 20ms 
+2013-08-06 15:37:07 - URL /admin/javadocs/stylesheet.css 200 38ms 
+2013-08-06 15:37:07 - URL /admin/javadocs/stylesheet.css 200 43ms 
+2013-08-06 15:37:16 - Could not start server on port: 80. Looks like port is already in use.
+2013-08-06 15:37:29 - URL /admin/index.html 200 7ms 
+2013-08-06 15:37:29 - URL /admin/javadocs/index.html 200 8ms 
+2013-08-06 15:37:29 - URL /admin/readme.txt 200 22ms 
+2013-08-06 15:37:29 - URL /admin/css/bootstrap/css/bootstrap.css 200 23ms 
+2013-08-06 15:37:29 - URL /admin/js/jquery.js 200 4ms 
+2013-08-06 15:37:29 - URL /admin/css/bootstrap/js/bootstrap.js 200 6ms 
+2013-08-06 15:37:30 - URL /admin/javadocs/allclasses-frame.html 200 28ms 
+2013-08-06 15:37:30 - URL /admin/javadocs/overview-frame.html 200 28ms 
+2013-08-06 15:37:30 - URL /admin/javadocs/overview-summary.html 200 6ms 
+2013-08-06 15:37:30 - URL /admin/activity/ 200 4ms 
+2013-08-06 15:37:30 - URL /admin/list/ 200 27ms 
+2013-08-06 15:37:30 - URL /admin/javadocs/stylesheet.css 200 38ms 
+2013-08-06 15:37:30 - URL /admin/javadocs/stylesheet.css 200 45ms 
+2013-08-06 15:37:30 - URL /admin/javadocs/stylesheet.css 200 7ms 
+2013-08-06 15:37:41 - Starting server on port 80
+2013-08-06 15:37:46 - URL /admin/index.html 200 18ms 
+2013-08-06 15:37:46 - URL /admin/readme.txt 200 7ms 
+2013-08-06 15:37:46 - URL /admin/css/bootstrap/css/bootstrap.css 200 9ms 
+2013-08-06 15:37:46 - URL /admin/css/bootstrap/js/bootstrap.js 200 4ms 
+2013-08-06 15:37:46 - URL /admin/js/jquery.js 200 5ms 
+2013-08-06 15:37:46 - URL /admin/javadocs/index.html 200 3ms 
+2013-08-06 15:37:46 - URL /admin/javadocs/overview-frame.html 200 6ms 
+2013-08-06 15:37:46 - URL /admin/activity/ 200 6ms 
+2013-08-06 15:37:46 - URL /admin/javadocs/allclasses-frame.html 200 9ms 
+2013-08-06 15:37:46 - URL /admin/javadocs/overview-summary.html 200 9ms 
+2013-08-06 15:37:46 - URL /admin/list/ 200 33ms 
+2013-08-06 15:37:46 - URL /admin/javadocs/stylesheet.css 200 22ms 
+2013-08-06 15:37:46 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:37:46 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:39:36 - Starting server on port 80
+2013-08-06 15:39:41 - URL /admin/index.html 200 13ms 
+2013-08-06 15:39:41 - URL /admin/css/bootstrap/css/bootstrap.css 200 15ms 
+2013-08-06 15:39:41 - URL /admin/javadocs/index.html 200 12ms 
+2013-08-06 15:39:41 - URL /admin/readme.txt 200 15ms 
+2013-08-06 15:39:41 - URL /admin/js/jquery.js 200 7ms 
+2013-08-06 15:39:41 - URL /admin/css/bootstrap/js/bootstrap.js 200 11ms 
+2013-08-06 15:39:41 - URL /admin/javadocs/overview-frame.html 200 10ms 
+2013-08-06 15:39:41 - URL /admin/javadocs/allclasses-frame.html 200 10ms 
+2013-08-06 15:39:41 - URL /admin/activity/ 200 3ms 
+2013-08-06 15:39:41 - URL /admin/javadocs/overview-summary.html 200 11ms 
+2013-08-06 15:39:41 - URL /admin/list/ 200 23ms 
+2013-08-06 15:39:41 - URL /admin/javadocs/stylesheet.css 200 22ms 
+2013-08-06 15:39:41 - URL /admin/javadocs/stylesheet.css 200 3ms 
+2013-08-06 15:39:41 - URL /admin/javadocs/stylesheet.css 200 2ms 
+2013-08-06 15:43:27 - URL /admin/css/bootstrap/img/glyphicons-halflings.png 200 6ms 
+2013-08-06 15:44:25 - Starting server on port 80
+2013-08-06 15:45:19 - Starting server on port 80
+2013-08-06 15:46:13 - Starting server on port 80
+2013-08-06 15:48:35 - Starting server on port 80
+2013-08-06 15:51:07 - Starting server on port 80
+2013-08-06 16:00:19 - Starting server on port 80
+2013-08-06 16:02:00 - Starting server on port 8000
+2013-08-06 16:16:20 - Starting server on port 8000
+2013-08-06 16:17:28 - Starting server on port 8000
+2013-08-06 16:24:23 - Starting server on port 8000
+2013-08-06 16:25:16 - Starting server on port 8000
+2013-08-06 16:26:19 - Starting server on port 8000

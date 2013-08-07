@@ -1,7 +1,6 @@
 package com.adobe.web.client;
 
 import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -39,13 +38,17 @@ public class HttpWebClient {
 		if(socket!=null) socket.close();
 		socket = new Socket(host, port);
 	}
+	public void closeSocket() throws UnknownHostException, IOException
+	{
+		if(socket!=null) socket.close();
+	}
 	/**
 	 * Make request on the open socket.
 	 * @param request
 	 * 			request object to be sent over socket.
 	 * @throws Exception 
 	 */
-	public int makeRequest(HttpWebRequest request) throws Exception
+	public HttpWebResponse makeRequest(HttpWebRequest request) throws Exception
 	{
 		InputStream in = socket.getInputStream();
 	    PrintStream out =  new PrintStream(new BufferedOutputStream(socket.getOutputStream()));
@@ -55,8 +58,7 @@ public class HttpWebClient {
 			response  = new HttpWebResponse(in,false);
 		else
 			response  = new HttpWebResponse(in,true);
-			
-		return response.responseData.length;
+		return response;
 	}
 	/**
 	 * Make a GET request with a given request string
@@ -64,7 +66,7 @@ public class HttpWebClient {
 	 * 		Request string.
 	 * @throws Exception 
 	 */
-	public int makeGetRequest(String uri) throws Exception
+	public HttpWebResponse makeGetRequest(String uri) throws Exception
 	{
 		HttpWebRequest request= new HttpWebRequest();
 		request.method = "GET";
@@ -78,16 +80,17 @@ public class HttpWebClient {
 	 * 		Request url.
 	 * @param data
 	 * 		Post data.
+	 * @return 
 	 * @throws Exception 
 	 */
-	public void makePutRequest(String uri,byte[] data) throws Exception
+	public HttpWebResponse makePutRequest(String uri,byte[] data) throws Exception
 	{
 		HttpWebRequest request= new HttpWebRequest();
 		request.method = "PUT";
 		request.request = uri;
 		request.requestBody = data;
 		request.headers.put("Content-Length", ""+request.requestBody.length);
-		makeRequest(request);
+		return makeRequest(request);
 	}
 	/**
 	 * Make a post request to given url.
@@ -95,9 +98,10 @@ public class HttpWebClient {
 	 * 		Request String
 	 * @param data
 	 * 		Post data
+	 * @return 
 	 * @throws Exception 
 	 */
-	public void makePostRequest(String uri,byte[] data) throws Exception
+	public HttpWebResponse makePostRequest(String uri,byte[] data) throws Exception
 	{
 		HttpWebRequest request= new HttpWebRequest();
 		request.method = "PUT";
@@ -105,7 +109,7 @@ public class HttpWebClient {
 		request.requestBody = data;
 		request.headers.put("Content-Length", ""+request.requestBody.length);
 		request.headers.put("Content-Type", "application/x-www-form-urlencoded");
-		makeRequest(request);
+		return makeRequest(request);
 	}
 	/**
 	 * Make a Head request to given url
@@ -113,7 +117,7 @@ public class HttpWebClient {
 	 * 			Request string.
 	 * @throws Exception 
 	 */
-	public int makeHeadRequest(String uri) throws Exception
+	public HttpWebResponse makeHeadRequest(String uri) throws Exception
 	{
 		HttpWebRequest request= new HttpWebRequest();
 		request.method = "HEAD";
@@ -125,14 +129,15 @@ public class HttpWebClient {
 	 * Make a DELETE request at given url.
 	 * @param uri
 	 * 		Request url.
+	 * @return 
 	 * @throws Exception 
 	 */
-	public void makeDeleteRequest(String uri) throws Exception
+	public HttpWebResponse makeDeleteRequest(String uri) throws Exception
 	{
 		HttpWebRequest request= new HttpWebRequest();
 		request.method = "DELETE";
 		request.request = uri;
 		request.headers.put("Content-Length", "0");
-		makeRequest(request);
+		return makeRequest(request);
 	}
 }

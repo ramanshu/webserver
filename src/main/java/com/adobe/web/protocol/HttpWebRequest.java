@@ -34,7 +34,6 @@ public class HttpWebRequest {
 		try
 		{
 			bodySize= Integer.parseInt(contentLength);
-			
 		}
 		catch(Exception e)
 		{
@@ -46,12 +45,11 @@ public class HttpWebRequest {
 			int nRead,total=0;
 			byte[] data = new byte[16384];
 
-			while ((nRead = in.read(data, 0, data.length)) != -1 && total<bodySize) 
+			while (total<bodySize && (nRead = in.read(data, 0, data.length)) != -1 ) 
 			{
 			  buffer.write(data, 0, nRead);
 			  total+=nRead;
 			}
-
 			buffer.flush();
 			requestBody = buffer.toByteArray();
 		}
@@ -62,8 +60,7 @@ public class HttpWebRequest {
 				postFields = new Hashtable<String,Object>();
 				
 			}
-			if (contentType.equalsIgnoreCase("application/x-www-form-urlencoded")) {
-				
+			if (contentType.startsWith("application/x-www-form-urlencoded")) {
 				postFields = setPostFields(new String(requestBody), contentType);
 
 			} 
@@ -156,7 +153,7 @@ public class HttpWebRequest {
 	Dictionary<String, Object> setPostFields(String requestBody,
 			String contentType) {
 		Dictionary<String, Object> postFields = new Hashtable<String, Object>();
-		if (contentType.equalsIgnoreCase("application/x-www-form-urlencoded")) {
+		if (contentType.startsWith("application/x-www-form-urlencoded")) {
 			String postData = requestBody;
 			String[] postFieldData = postData.split("&");
 			for (int i = 0; i < postFieldData.length; i++) {

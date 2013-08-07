@@ -6,9 +6,6 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
@@ -17,7 +14,6 @@ import java.util.Queue;
 
 import org.apache.log4j.Logger;
 
-import com.adobe.web.client.HttpWebClient;
 import com.adobe.web.protocol.HttpWebRequest;
 import com.adobe.web.protocol.HttpWebResponse;
 import com.adobe.web.standards.HttpResponseCodes;
@@ -38,7 +34,7 @@ public class HttpWebServer {
 	private static boolean keepAlive;
 	private static int requestsRecieved=0;
 	private static Integer requestsServed=0;
-	static Logger log = Logger.getLogger(HttpWebServerRun.class);
+	static Logger log = Logger.getLogger(HttpWebServer.class);
 	public static ArrayList<String> requestLog = new ArrayList<String>();
 
 	public HttpWebServer() throws InstantiationException, IllegalAccessException, URISyntaxException, IOException {
@@ -69,29 +65,6 @@ public class HttpWebServer {
 			keepAlive=false;
 		hasRequest = new boolean[threadPoolSize];
 		lastSeenAt = new long[threadPoolSize];
-	}
-	public class HttpWebClientThread implements Runnable{
-		
-		
-
-		
-		public void run ()
-		{
-					try {
-						Thread.sleep(1000);
-						HttpWebClient client = new HttpWebClient();
-						client.openSocket("localhost", 8000);
-						Path path = Paths.get("C:\\Users\\mahaur\\Desktop\\temp\\vineet.pdf");
-						byte[] data;
-						data = Files.readAllBytes(path);
-				        client.makeGetRequest("/temp/artifacts.xml");
-				        //System.out.println(new String(client.buffer).trim());
-				    } catch (Exception e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-
-		}
 	}
 	public class HttpWebSchedulerThread implements Runnable{
 		
@@ -148,10 +121,8 @@ public class HttpWebServer {
 
 						try
 						{
-							//System.out.println("Here1");
 							lastSeenAt[threadID] = System.currentTimeMillis();
 							HttpWebRequest request = new HttpWebRequest(in);
-							//System.out.println("Here2");
 							HttpWebResponse response= requestProcessor.requestProcessorTemp(request);
 							response.respond(out);
 							out.flush();
@@ -164,7 +135,7 @@ public class HttpWebServer {
 							synchronized(requestsServed)
 							{
 								requestsServed++;
-								System.out.println(requestsRecieved+" "+requestsServed);
+								//System.out.println(requestsRecieved+" "+requestsServed);
 							}
 							String connection=request.headers.get("Connection");
 							if(!keepAlive ||(connection!=null && connection.equalsIgnoreCase("close")) )

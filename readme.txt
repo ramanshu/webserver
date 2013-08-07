@@ -17,6 +17,7 @@ Current version of the Webserver support handling the HTTP rfc specified request
 Java Runtime Environment(JRE) 7
 - The application has been run and found to have to issues with JRE 7.
 
+
 == Features ==
 
 Support handling the HTTP rfc specified requests namely GET, POST, HEAD, PUT and DELETE
@@ -63,9 +64,11 @@ The Webserver supports get, post, head, put and delete requests. Since a server 
 
 == Usage ==
 
-
 To simply run this server 
-java -jar webserver-1.0.jar 
+->click webserver.bat file in windows
+
+Java command to run the server is 
+java -cp webserver.jar com.adobe.web.server.HttpWebServerRun
 
 The server will look for a config.properties and log.properties in the current directory where the jar is run. You can copy the example configuration file to use configure the srever 
 
@@ -110,6 +113,16 @@ log4j.appender.file.MaxBackupIndex=1
 log4j.appender.file.layout=org.apache.log4j.PatternLayout
 log4j.appender.file.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} - %m%n
 ###########################################
+
+== Testing ==
+
+Server has been tested to give correct responses for the different request type.
+Server has also been tested for the handling large number of requests.
+
+In order to run automated tests you need to add the two files at the document root with names:
+testFile1.txt
+testFile2.txt
+ and get results for the junit test cases.
 
 == Dependencies ==
 

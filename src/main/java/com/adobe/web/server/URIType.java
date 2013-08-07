@@ -7,11 +7,10 @@ public class URIType {
 	static final int JSP = 3;
 	static final int ASP = 4;
 	static final int ADMIN = 5;
-	//static final FILE = 0;
 	
 	static int getType(String uri)
 	{
-		if (uri.startsWith("/admin"))
+		if (uri.startsWith("/admin/"))
 			return ADMIN;
 		else if( uri.endsWith(".php"))
 			return PHP;

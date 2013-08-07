@@ -135,7 +135,6 @@
                 <li class="nav-item active" link="home"><a href="#">Home</a></li>
                 <li class="nav-item" link="documentation"><a href="#">Documentation</a></li>
                 <li class="nav-item" link="javadocs"><a href="#">Javadocs</a></li>
-                <li class="nav-item" link="source"><a href="#">Source</a></li>
                 <li class="nav-item" link="activity"><a href="#">Activity</a></li>
                 <li class="nav-item" link="admin"><a href="#">Admin</a></li>
                 <li class="nav-item" link="contact"><a href="#">Contact</a></li>
@@ -171,6 +170,7 @@
 		<br/>
 		<div >
 		<a class="btn btn-large btn-success" href="#" onclick="getLog();"><i class="icon-refresh icon-white icon-large"></i> Refresh</a>
+		<a class="btn btn-large" href="#" onclick="setAutoRefresh();"><i class="icon-refresh icon-white icon-large"></i> AutoRefresh</a>
 		<p>Click  to update.</p>
 		</div>
 		<div class="well activity-pane">
@@ -200,33 +200,13 @@
 			<b>Author Info:</b>
 			<br/>
 			Name:<i>Ramanshu Mahaur</i><br/>
-			Email:<i><a href="maharamanshu@gmail.com" target="mail_to">maharamanshu@gmail.com</a></i></br>
+			Email:<i><a href="mailto:maharamanshu@gmail.com" >maharamanshu@gmail.com</a></i></br>
 			Mobile:<i>+91 8010246046</i><br/>
 		</p>
         </div>
       </div>
 	
       <hr>
-
-      <!-- Example row of columns -->
-      <div class="row-fluid hide">
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
-
 
       <div class="footer">
         <p>&copy; Ramanshu Mahaur</p>
@@ -236,16 +216,11 @@
     <script src="css/bootstrap/js/bootstrap.js"></script>
     <script src="js/jquery.js"></script>
 	<script>
+		var autoRefresh = false;
+		var intervalVar;
 		$(".nav-item").click(function( event) {
 				var current = $(this).attr('link');
 				$(this).addClass("active");
-				$(".nav-item").not($(this)).removeClass("active");
-				var item = $("#"+current);
-				$(".body-item").not(item).hide();
-				item.show();
-        });
-		$(".delete-file").click(function( event) {
-				var current = $(this).attr('link');
 				$(".nav-item").not($(this)).removeClass("active");
 				var item = $("#"+current);
 				$(".body-item").not(item).hide();
@@ -262,7 +237,16 @@
 		{
 		$.get('/admin/list/?url='+url, function(data) {
 		$('.browser').html(data);
-			$(".view-file").click(function(event){
+		$(".delete-file").click(function(event){
+				var link = $(this).attr('link');
+				alert(link);
+				$.post("/admin/delete/", { "url" :link })
+					.done(function(data) {
+					var current = $('.current-folder').attr('link');
+					setBrowser(current);
+				});				
+		});
+		$(".view-file").click(function(event){
 				var isDirectory = $(this).attr('type');
 				var link = $(this).attr('link');
 				if(isDirectory=='false')
@@ -275,31 +259,36 @@
 					setBrowser(link);
 				}
 			});
+			
 	});
 		}
 
 		setBrowser('%2F');
 		function getLog()
 		{
-		$.get('/admin/activity/', function(data) {
+			$.get('/admin/activity/', function(data) {
 			list = data.split('\n');
 			data2="";
 			for(i=0;i<list.length;i++)
 			data2+= "<tr><td class=\"pull-left\">"+list[i]+"</td></tr>\n";
-			$("#activity-table").html(data2);
-			
-		});
-			
+			$("#activity-table").html(data2);			
+			});			
+		}
+		getLog();
+		function setAutoRefresh()
+		{
+		if(autoRefresh)
+		{
+		autoRefresh = false;
+		clearInterval(intervalVar);
+		}
+		else
+		{
+		autoRefresh=true;
+		intervalVar=setInterval(getLog,1000);
+		}
 		}
 		
-		getLog();
-		
-		/*$(".doc-file").click(function(event){
-				var link = $(this).attr('link');
-				alert(link);
-				$("#doc-iframe").attr('src',link);
-				$("#doc-iframe").focus(scrollGo);
-			});*/
 	</script>
 
   </body>

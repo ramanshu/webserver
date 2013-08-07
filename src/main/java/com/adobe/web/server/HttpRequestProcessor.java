@@ -2,13 +2,11 @@ package com.adobe.web.server;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,9 +15,7 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.util.Properties;
 
-import javax.swing.ImageIcon;
-
-import sun.misc.IOUtils;
+import org.apache.log4j.Logger;
 
 import com.adobe.web.protocol.FileObject;
 import com.adobe.web.protocol.HttpWebRequest;
@@ -28,19 +24,17 @@ import com.adobe.web.standards.HttpContentTypes;
 
 public class HttpRequestProcessor {
 	String document_root;
-	final String admin_root;
 	boolean admin_mode;
-	
+	static Logger log = Logger.getLogger(HttpRequestProcessor.class);
+
 	HttpWebServer server;
 	final boolean dir_listing_allowed;
-	private byte[] http404responseTemplate = "<html><title>404 Not Found</title><body><h1>Not Found</h1><h3>The requested URL was not found on this server.</h3><hr/><i>Ramanshu.mahaur running on localHost Port 8000 </i></body></html>"
+	private byte[] http404responseTemplate = "<html><title>404 Not Found</title><body><h1>Not Found</h1><h3>The requested URL was not found on this server.</h3><hr/>For any queries contact webmaster<i><a href=\"mailto:mahaur@adobe.com\">ramanshu.mahaur</a></i></body></html>"
 			.getBytes();
 
 	HttpRequestProcessor(Properties prop,HttpWebServer server) throws InstantiationException,
 			IllegalAccessException, URISyntaxException, IOException {
 		this.server = server;
-		admin_root = "C:/Users/mahaur/Desktop/admin";
-		//System.out.println("Admin root : "+" "+ admin_root);
 		
 		try{
 			document_root = prop.getProperty("documentRoot").trim();
@@ -60,8 +54,7 @@ public class HttpRequestProcessor {
 		dir_listing_allowed=true;
 		File docRoot = new File(document_root);
 		if (!docRoot.exists() || !docRoot.isDirectory()) {
-			System.out
-					.println("Document root must be a directory that exists. Not starting...");
+			log.error("Document root must be a directory that exists. Not starting...");
 			System.exit(1);
 		}
 	}
@@ -89,7 +82,6 @@ public class HttpRequestProcessor {
 			{
 				
 				{
-					System.out.println("hrere");
 					String url = (String)request.getFields.get("url");
 					if(url!=null)
 					{
@@ -132,6 +124,7 @@ public class HttpRequestProcessor {
 				}
 				else if (uriType == URIType.ADMIN && request.url.startsWith("/admin/delete/"))
 				{
+					
 					if(adminFileManager(request, 1))
 					{
 						HttpWebResponse response = new HttpWebResponse();
@@ -219,13 +212,12 @@ public class HttpRequestProcessor {
 				if (value instanceof FileObject) {
 					FileOutputStream stream = new FileOutputStream(
 							document_root + request.url
-									+ ((FileObject) value).fileName);// "\\temp\\image.jpeg");
+									+ ((FileObject) value).fileName);
 					stream.write(((FileObject) value).fileData);
-					System.out.println("Writeing File at:" + document_root
-							+ request.url + ((FileObject) value).fileName);
+					//System.out.println("Writeing File at:" + document_root	+ request.url + ((FileObject) value).fileName);
 					stream.close();
 				} else {
-					System.out.println("Writeing Value ");
+					//System.out.println("Writeing Value ");
 				}
 			}
 		}
@@ -240,11 +232,10 @@ public class HttpRequestProcessor {
 				if (request.postFields != null) {
 					String url = (String)request.postFields.get("url");
 					String type = (String)request.postFields.get("type");
-					System.out.println(url +" "+ type);
 					if(url!=null && type!=null ){
 						if(type.equalsIgnoreCase("file"))
 						{
-							System.out.println(url +" "+ type+" "+request.postFields.size());
+							//System.out.println(url +" "+ type+" "+request.postFields.size());
 							FileObject file= (FileObject)request.postFields.get("file");
 							if(file!=null)
 							{
@@ -275,10 +266,12 @@ public class HttpRequestProcessor {
 				if (request.postFields != null) 
 				{
 					String url = (String)request.postFields.get("url");
+					//System.out.print("Hre"+action+" "+request.url+ ' '+(request.postFields != null)+" "+url);
 					if(url!=null)
 					{
 						
 						File file=  new File (document_root+URLDecoder.decode(url, "UTF-8"));
+						//System.out.println("\n"+file.getAbsolutePath());
 						 if(file==null ||  !file.delete())
 							 	throw new Exception();
 					}
@@ -339,17 +332,19 @@ public class HttpRequestProcessor {
 
 	byte[] fileListTemplate(File directory, String path) {
 		File[] fileList = directory.listFiles();
-		System.out.println(path +" "+directory.getName());
-		String parent;
-		
-		if(!directory.getName().equalsIgnoreCase("Desktop"))			
-			parent = path.substring(0,path.lastIndexOf('/')+1);
-		else 
+		String parent;		
+		if(path.equalsIgnoreCase("/"))			
 			parent = "/";
+		else if(path.endsWith("/"))
+			parent = path.substring(0,path.length()-1).substring(0,path.lastIndexOf('/'));
+		else
+			parent = path.substring(0,path.lastIndexOf('/'));
+		if(parent.equalsIgnoreCase(""))
+			parent ="/";
 		if(!path.endsWith("/"))
 			path +="/";
 		String tempLate = "";
-		tempLate +="<div class=\"browser-item folder\">\n";
+		tempLate +="<div class=\"browser-item current-folder\" link=\""+path+"\">\n";
 		tempLate +="<i class=\"icon-folder-open\"></i>";
 		tempLate +=path;
 		tempLate +="<div class=\"pull-right\"><a class=\"btn btn-small view-file\" type=\""+"true"+"\" link=\""+parent +"\"><i class=\"icon-arrow-up\"></i>/..</a></div></div><hr>";
@@ -360,13 +355,13 @@ public class HttpRequestProcessor {
 				tempLate +="<div class=\"browser-item\">\n";
 				tempLate +="<i class=\"icon-folder-open\"></i>";
 				tempLate +=fileList[i].getName();
-				tempLate +="<div class=\"pull-right\"><a class=\"btn btn-small view-file\" type=\""+fileList[i].isDirectory()+"\" link=\""+path  + fileList[i].getName()+"\"><i class=\"icon-arrow-right\"></i></a></div></div>";
+				tempLate +="<div class=\"pull-right\"><a class=\"btn btn-small delete-file\" type=\""+fileList[i].isDirectory()+"\" link=\""+path  + fileList[i].getName()+"\"><i class=\"icon-trash\"></i></a><a class=\"btn btn-small view-file\" type=\""+fileList[i].isDirectory()+"\" link=\""+path  + fileList[i].getName()+"\"><i class=\"icon-arrow-right\"></i></a></div></div>";
 			}else
 			{
 				tempLate +="<div class=\"browser-item\">\n";
 				tempLate +="<i class=\"icon-file\"></i>";
 				tempLate +=fileList[i].getName();
-				tempLate +="<div class=\"pull-right\"><a class=\"btn\">"+fileList[i].length()+"bytes</a><a class=\"btn btn-small view-file\" type=\""+fileList[i].isDirectory()+"\" link=\""+path  + fileList[i].getName()+"\"><i class=\"icon-arrow-right\"></i></a></div></div>";
+				tempLate +="<div class=\"pull-right\"><a class=\"btn\">"+fileList[i].length()+"bytes</a><a class=\"btn btn-small delete-file\" type=\""+fileList[i].isDirectory()+"\" link=\""+path  + fileList[i].getName()+"\"><i class=\"icon-trash\"></i></a><a class=\"btn btn-small view-file\" type=\""+fileList[i].isDirectory()+"\" link=\""+path  + fileList[i].getName()+"\"><i class=\"icon-arrow-right\"></i></a></div></div>";
 			}
 			}
 		tempLate +="</div><hr>";
@@ -389,7 +384,7 @@ public class HttpRequestProcessor {
 				
 			if(!request.url.endsWith("/"))
 			{
-			InputStream is = getClass().getClassLoader().getResourceAsStream(request.url);
+			InputStream is = getClass().getClassLoader().getResourceAsStream(request.url.substring(1));
 			ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 
 			int nRead;

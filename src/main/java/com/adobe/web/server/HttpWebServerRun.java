@@ -17,7 +17,6 @@ public class HttpWebServerRun {
     		prop.load(new FileInputStream("config.properties"));
  		    HttpWebServer web = new HttpWebServer(prop);
  			web.Start();
-// 
     	} catch (IOException ex) {
     		ex.printStackTrace();
         }		

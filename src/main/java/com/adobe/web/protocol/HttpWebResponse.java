@@ -89,7 +89,6 @@ public class HttpWebResponse {
 		}
 		out.print("\r\n");
 		out.write(responseData);
-		//System.out.println("Called this one!");
 		out.flush();
 		return true;
 		}

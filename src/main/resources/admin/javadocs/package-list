@@ -1,1 +1,5 @@
 com.adobe.web.algorithm
+com.adobe.web.client
+com.adobe.web.protocol
+com.adobe.web.server
+com.adobe.web.standards
