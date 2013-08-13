@@ -1,14 +1,15 @@
 package com.adobe.web.server;
-
-public class URIType {
-	static final int FILE = 0;
-	static final int DIRECTORY = 1;
-	static final int PHP = 2;
-	static final int JSP = 3;
-	static final int ASP = 4;
-	static final int ADMIN = 5;
+/**
+ * Identifies the uri type from the uri message.
+ * 
+ * @author mahaur
+ *
+ */
+// Currently all requests are served as file/directory/admin/ request 
+public enum URIType {
+	FILE , DIRECTORY , PHP , JSP, ASP, ADMIN;
 	
-	static int getType(String uri)
+	 static URIType getType(String uri)
 	{
 		if (uri.startsWith("/admin/"))
 			return ADMIN;

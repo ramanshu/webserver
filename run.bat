@@ -1,1 +1,1 @@
-java -jar webserver.jar
+java -cp webserver.jar com.adobe.web.server.HttpWebServerRun

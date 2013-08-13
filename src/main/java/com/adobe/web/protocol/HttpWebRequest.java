@@ -9,18 +9,41 @@ import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.StringTokenizer;
+/**
+ * HttpWebRequest is the used to represent a standard http request which constists of the request url, headers and body.
+ * Additional fields that have been used are the post data and get data.
+ * 
+ * @author Ramanshu Mahaur
+ *
+ */
 
 public class HttpWebRequest {
+	/** Request Method type*/
 	public String method;
+	/** Request string*/
 	public String request;
+	/** Http version*/
 	public String version;
+	/** request url after extracting get fields*/
 	public String url;
+	/** Request body content*/
 	public byte[] requestBody;
-	public static int requestTimeOut;
+	/** Request headers*/
 	public Dictionary<String, String> headers;
+	/** Parsed post fields in case of a post request*/
 	public Dictionary<String, Object> postFields;
+	/** Parsed get Fields.*/
 	public Dictionary<String, String> getFields;
-
+	
+	
+	/**
+	 * HttpWebRequest construct which takes in an inputstream as input reads data over it which contain all the fields in the request.
+	 * 
+	 * 
+	 * @param in
+	 * 			InputStream to be read.
+	 * @throws Exception
+	 */
 	public HttpWebRequest(InputStream in) throws Exception {
 		String line = readLine(in);
 		StringTokenizer st = new StringTokenizer(line, " ");
@@ -81,12 +104,25 @@ public class HttpWebRequest {
 		}
 	}
 
+	/**
+	 * HttpWebRequest constructor to set up a simple request object
+	 */
 	public HttpWebRequest() {
-		version = "HTTP/1.0";
+		version = "HTTP/1.1";
 		headers = new Hashtable<String, String>();
 		requestBody=new byte[0];
 	}
+	
+	
 
+	/**
+	 * Send a request to the server over an outputstream, which may be a socket's output stream.
+	 * 
+	 * @param out
+	 * 			Outputstream tosend the request to.
+	 * @return
+	 * @throws IOException
+	 */
 	public boolean request(PrintStream out) throws IOException
 	{
 		out.print(method+" "+request+" "+version+"\r\n");
@@ -104,6 +140,13 @@ public class HttpWebRequest {
 		out.flush();
 		return true;		
 	}
+	/**
+	 * Read a single line terminated by /n or /r/n from the inputstream
+	 * @param in
+	 * 			Inputstream to be read
+	 * @return
+	 * @throws IOException
+	 */
 	private String readLine(InputStream in) throws IOException {
 		String buffer = "";
 		char c;
@@ -118,6 +161,12 @@ public class HttpWebRequest {
 		}
 
 	}
+	/**
+	 * Read headers and parse them accordingly
+	 * @param in
+	 * @return
+	 * @throws IOException
+	 */
 	Hashtable<String, String> setHeaders(InputStream in) throws IOException
 	{
 		Hashtable<String, String> headers = new Hashtable<String, String>();
@@ -133,6 +182,12 @@ public class HttpWebRequest {
 		}
 		return headers;
 	}
+	/**
+	 * Read request string and extract the get fields from it.
+	 * @param request
+	 * @return
+	 * @throws UnsupportedEncodingException
+	 */
 	Dictionary<String, String> setGetFields(String request) throws UnsupportedEncodingException {
 		Dictionary<String, String> getFields = new Hashtable<String, String>();
 
@@ -150,6 +205,12 @@ public class HttpWebRequest {
 		}
 		return getFields;
 	}
+	/**
+	 * Read request body and extract post fields from it in case of a post request, if contenttype = "application/x-www-form-urlencoded".
+	 * @param requestBody
+	 * @param contentType
+	 * @return
+	 */
 	Dictionary<String, Object> setPostFields(String requestBody,
 			String contentType) {
 		Dictionary<String, Object> postFields = new Hashtable<String, Object>();
@@ -165,6 +226,15 @@ public class HttpWebRequest {
 		return postFields;
 	}
 
+	/**
+	 * Read request body and extract post fields from it in case of a post request, if contenttype = "multipart/form-data".
+	 * 
+	 * @param requestBody
+	 * @param contentType
+	 * @param boundary
+	 * @return
+	 * @throws IOException
+	 */
 	Dictionary<String, Object> setPostFields(byte[] requestBody,
 			String contentType, byte[] boundary) throws IOException {
 		Dictionary<String, Object> postFields = new Hashtable<String, Object>();

@@ -33,7 +33,7 @@ public class HttpWebClient {
 	 * @throws UnknownHostException
 	 * @throws IOException
 	 */
-	public void openSocket(String host,int port) throws UnknownHostException, IOException
+	public void openSocket(String host,int port) throws IOException 
 	{
 		if(socket!=null) socket.close();
 		socket = new Socket(host, port);
@@ -48,7 +48,7 @@ public class HttpWebClient {
 	 * 			request object to be sent over socket.
 	 * @throws Exception 
 	 */
-	public HttpWebResponse makeRequest(HttpWebRequest request) throws Exception
+	public HttpWebResponse makeRequest(HttpWebRequest request) throws Exception 
 	{
 		InputStream in = socket.getInputStream();
 	    PrintStream out =  new PrintStream(new BufferedOutputStream(socket.getOutputStream()));

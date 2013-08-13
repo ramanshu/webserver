@@ -2,11 +2,14 @@ package com.adobe.web.standards;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
-
+/**
+ * Stores Content types for different extensions
+ * @author Ramanshu Mahaur
+ *
+ */
 public class HttpContentTypes {
 	static Dictionary< String, String> contentTypes;
-	static HttpContentTypes self;
-	HttpContentTypes()
+	static
 	{
 		contentTypes = new Hashtable< String, String>();
 		// Type Application
@@ -101,10 +104,6 @@ public class HttpContentTypes {
 		}
 	public static String get(String key)
 	{
-		if(self == null)
-		{
-			self = new HttpContentTypes();
-		}
 		String value=contentTypes.get(key);
 		if(value!=null)
 		{

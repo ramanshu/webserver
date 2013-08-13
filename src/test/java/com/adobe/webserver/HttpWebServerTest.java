@@ -2,9 +2,11 @@ package com.adobe.webserver;
 
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -19,7 +21,6 @@ import com.adobe.web.server.HttpWebServer;
 
 public class HttpWebServerTest {
 	HttpWebServer web;
-	boolean isRunning;
 	HttpWebResponse response;
 	Properties prop;
 	Integer requestsProcessed;
@@ -89,7 +90,7 @@ public class HttpWebServerTest {
 								{
 									synchronized(requestsProcessed)
 									{
-										requestsProcessed++;										
+										requestsProcessed++;	
 									}
 								}
 								client.closeSocket();
@@ -105,14 +106,13 @@ public class HttpWebServerTest {
 
 		}
 	}
-	public class HttpWebServerThread implements Runnable{
+	public class HttpWebServerTesTThread implements Runnable{
 		public  void run(){
-			 PropertyConfigurator.configure("log4j.properties");
+			 PropertyConfigurator.configure(this.getClass().getClassLoader().getResourceAsStream("properties/log4j.properties"));
 			 
 	    	try {
 	    		prop= new Properties();
-	    		prop.load(new FileInputStream("config.properties"));
-	    		//System.out.println((String) prop.getProperty("port"));
+	    		prop.load(this.getClass().getClassLoader().getResourceAsStream("properties/config.properties"));
 	    		web = new HttpWebServer(prop);
 				web.Start();
 	    	} catch (Exception ex) {
@@ -120,49 +120,54 @@ public class HttpWebServerTest {
 	        }		
 		}	
 	}
-
+	
+	void setupTest(int branch,String testUrl) throws IOException, InterruptedException
+	{
+		Thread server = new Thread(new HttpWebServerTesTThread());
+		HttpWebClientThread client =(new HttpWebClientThread(branch,testUrl));
+		server.start();
+		client.run();
+		web.Stop();
+	}
 	@Test
 	public void testGet() throws InterruptedException, IOException {
 		
-		String testUrl ="/testFile1.txt";
+		String testUrl ="/admin/js/jquery.js";
 		
-		Thread server = new Thread(new HttpWebServerThread());
-		Thread client = new Thread(new HttpWebClientThread(0,testUrl));
-		
-		server.start();
-		client.start();
-		
-		client.join();
-		web.Stop();
-		String path = (String) prop.getProperty("documentRoot");
-		Path file = Paths.get(path+testUrl);
-		byte[] fileData;
-		fileData = Files.readAllBytes(file);
-	 	assertArrayEquals("File is same as response", fileData, response.responseData); 
+		setupTest(0,testUrl);
+
+		InputStream in = getClass().getClassLoader().getResourceAsStream("admin/js/jquery.js");
+		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+		int nRead;
+		byte[] data = new byte[16384];
+
+		while ((nRead = in.read(data, 0, data.length)) != -1 ) 
+		{
+		  buffer.write(data, 0, nRead);
+		}
+		buffer.flush();
+		byte[] fileData = buffer.toByteArray();
+
+		assertArrayEquals("File is same as response", fileData, response.responseData); 
 	}
 
-//	@Test
-//	public void testPost() {
-//		
-//		
-//		fail("Not yet implemented");
-//	}
+
 	@Test
 	public void testHead() throws InterruptedException, IOException {
-		String testUrl ="/testFile1.txt";
+		String testUrl ="/admin/js/jquery.js";
+		setupTest(2,testUrl);
 		
-		Thread server = new Thread(new HttpWebServerThread());
-		Thread client = new Thread(new HttpWebClientThread(2,testUrl));
-		
-		server.start();
-		client.start();
-		
-		client.join();
-		web.Stop();
-		String path = (String) prop.getProperty("documentRoot");
-		Path file = Paths.get(path+testUrl);
-		byte[] fileData;
-		fileData = Files.readAllBytes(file);
+		InputStream in = getClass().getClassLoader().getResourceAsStream("admin/js/jquery.js");
+		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+		int nRead;
+		byte[] data = new byte[16384];
+
+		while ((nRead = in.read(data, 0, data.length)) != -1 ) 
+		{
+		  buffer.write(data, 0, nRead);
+		}
+		buffer.flush();
+		byte[] fileData = buffer.toByteArray();
 		int bodySize =0;
 		for(int i=0;i<response.headers.size();i++)
 		{
@@ -178,9 +183,28 @@ public class HttpWebServerTest {
 	}
 	@Test
 	public void testDelete() throws InterruptedException, IOException {
-		String testUrl ="/testFile2.txt";
+
+		InputStream in = getClass().getClassLoader().getResourceAsStream("admin/js/jquery.js");
+		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+		int nRead;
+		byte[] data = new byte[16384];
+
+		while ((nRead = in.read(data, 0, data.length)) != -1 ) 
+		{
+		  buffer.write(data, 0, nRead);
+		}
+		buffer.flush();
+		byte[] fileData = buffer.toByteArray();
+		Properties prop= new Properties();
+		prop.load(this.getClass().getClassLoader().getResourceAsStream("properties/config.properties"));
+		String path = (String) prop.getProperty("documentRoot");		
+		FileOutputStream fos = new FileOutputStream(path+"/testFileDelte");
+		fos.write(fileData);
+		fos.close();		
 		
-		Thread server = new Thread(new HttpWebServerThread());
+		String testUrl ="/testFileDelte";
+		
+		Thread server = new Thread(new HttpWebServerTesTThread());
 		Thread client = new Thread(new HttpWebClientThread(0,testUrl));
 		server.start();
 		client.start();		
@@ -197,23 +221,31 @@ public class HttpWebServerTest {
 	}
 	@Test
 	public void testPut() throws InterruptedException, IOException {
-		String testUrl ="/testFile3.txt";
-		String fileToPut ="/testFile1.txt";
+		String testUrl ="/testFile3";
+		String fileToPut ="admin/js/jquery.js";
 		Properties prop= new Properties();
-		prop.load(new FileInputStream("config.properties"));
-		String path = (String) prop.getProperty("documentRoot");
-		Path file = Paths.get(path+fileToPut);
-		byte[] fileData;
-		fileData = Files.readAllBytes(file);
+		prop.load(this.getClass().getClassLoader().getResourceAsStream("properties/config.properties"));
+
+		InputStream in = getClass().getClassLoader().getResourceAsStream(fileToPut);
+		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+		int nRead;
+		byte[] data = new byte[16384];
+
+		while ((nRead = in.read(data, 0, data.length)) != -1 ) 
+		{
+		  buffer.write(data, 0, nRead);
+		}
+		buffer.flush();
+		byte[] fileData = buffer.toByteArray();
 		
-		Thread server = new Thread(new HttpWebServerThread());
-		Thread client = new Thread(new HttpWebClientThread(3,testUrl,fileData));
+		Thread server = new Thread(new HttpWebServerTesTThread());
+		HttpWebClientThread client = new HttpWebClientThread(3,testUrl,fileData);
 		server.start();
-		client.start();		
-		client.join();
-		client = new Thread(new HttpWebClientThread(0,testUrl));
-		client.start();		
+		client.run();		
+		client = new HttpWebClientThread(0,testUrl);
+		client.run();		
 		web.Stop();
+		String path = (String) prop.getProperty("documentRoot");
 		Path file2 = Paths.get(path+testUrl);
 		byte[] fileData2;
 		fileData2 = Files.readAllBytes(file2);
@@ -222,10 +254,10 @@ public class HttpWebServerTest {
 	}
 	@Test
 	public void testStress() throws InterruptedException, IOException {
-		int numClients = 100;
-		int numRequests = 100;
-		String testUrl ="/testFile1.txt";
-		Thread server = new Thread(new HttpWebServerThread());
+		int numClients = 10;
+		int numRequests = 10;
+		String testUrl ="/admin/javadocs/index.html";
+		Thread server = new Thread(new HttpWebServerTesTThread());
 		server.start();
 		requestsProcessed=0;
 		Thread[] client = new Thread[numClients];
@@ -242,4 +274,5 @@ public class HttpWebServerTest {
 		//web.Stop();
 		assertTrue("All requests Processed",this.requestsProcessed==numClients*numRequests); 		
 	}
+	
 }

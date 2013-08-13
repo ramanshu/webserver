@@ -1,12 +1,14 @@
 package com.adobe.web.standards;
 
-import java.util.Dictionary;
 import java.util.Hashtable;
-
+/**
+ * Stores reponse messages for different response codes.
+ * @author mahaur
+ *
+ */
 public class HttpResponseCodes {
-	static Dictionary< Integer, String> responseCodes;
-	static HttpResponseCodes self;
-	HttpResponseCodes()
+	static Hashtable< Integer, String> responseCodes;
+	static 
 	{
 		responseCodes = new Hashtable< Integer, String>();
 		responseCodes.put(100, "Continue");
@@ -75,10 +77,6 @@ public class HttpResponseCodes {
 	}
 	public static String get(Integer key)
 	{
-		if(self == null)
-		{
-			self = new HttpResponseCodes();
-		}
 		return responseCodes.get(key);
 	}	
 }

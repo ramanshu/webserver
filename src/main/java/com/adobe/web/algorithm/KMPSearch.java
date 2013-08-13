@@ -1,7 +1,8 @@
 package com.adobe.web.algorithm;
 import java.util.ArrayList;
 /**
- * This is a standard Implementation of the KMP pattern search algorithm.
+ * This is a standard Implementation of the Knuth Morris Patt(KMP) pattern search algorithm.
+ * It is an linear order search algorithm which requires computation of a failure matrix which can also be computed in linear time.
  * 
  * @author Ramanshu Mahaur
  *
